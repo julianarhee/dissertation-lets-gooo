@@ -11,31 +11,47 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 % Figure:  Summary stats of OSI, DSI, "Fraction tuned"
 % Figure:  RFs + ORI preferences
 
-% Figure:  Coregistration & 2p_retino
-\begin{figure}
-    \includegraphics[width=\textwidth]{figures/chapter_2/2p_retino2.pdf}
-    \vspace{.1in}
-    \caption[Coregistration and area identification in 2p]{Coregistration and area identification in 2p . \textbf{a.} REFREF.
-    \label{fig:2p_retino}}
-\end{figure}
 
-% Figure:  receptive_fields
-\begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_3/receptive_fields.pdf}
-    \vspace{.1in}
-    \caption[Receptive fields]{Receptive fields. \textbf{a.} REFREF.
-    \label{fig:receptive_fields}}
-\end{figure}
- 
 \newthought{Beyond V1}, a subset of contiguous areas spanning the lateral edge of rat cortex have garnered significant attention over the past few years due to similarities between these areas in the rat and the primate ventral visual stream. Several studies \cite{Vermaercke2014, Tafazoli2017, Vinken2016NeuralCortex} have investigated these visual areas specifically in the context of visual object representations in order to test the extent to which single-unit properties characteristic of the highest levels of the primate ventral stream might also be found in the rat. These previous studies bolster the promise of the rat visual system as highly sophisticated, perhaps similar to that of primates in certain ways. 
-
 However, monkeys and rodents differ in dramatic ways --- on one hand, similarities in how their visual systems solve a given problem are incredibly exciting, as they point to general principles conserved across specie. On the other hand, each solution is likely to be influenced by differences in the natural visual statistics by which their visual systems have been shaped. 
 
 Despite the fact that animals with the best vision, like cats or monkeys, have been the traditional models of choice for vision studies, mice have become increasingly popular models for studying visual circuits over the past decade. This is arguably due to the immensely powerful genetic tools combined with chronic, large-scale population recordings, much of which are prohibitively challenging to use in monkeys.
 
 In contrast, although rats have long been studied for visually-guided behaviors, large-scale cellular resolution access to their visual cortex has proved to be far more challenging. Our broad-level goal is to bridge the gap between neural circuit access and rich behavioral capacities in the rat. What has remained lacking is a basic characterization of any visual area beyond V1 in the rat. Such a systematic study provides valuable points of comparison not just with primates, but with other animal models, including mice. 
 
-We carried out the first comprehensive survey of visual response properties across these different cortical areas in the rat. We characterize the functional organization of a subset of visual areas for the first time with cellular resolution imaging in awake, head-fixed animals. Specifically, we focused on areas V1, LM, and LI, where the most is known about single unit response properties in the rat. At a broader level, that they may be capable of supporting visual object recognition behavior is an exciting starting point for combining the powerful tools common in traditional genetic models like mice with kinds of complex behaviors associated with primates.  
+% Broad overview of experiment design
+Two overarching goals shaped our experimental design (Figure\ref{fig:experiment_design}). First, we sought to provide the first characterization of basic, visual response properties of areas V1, LM, and LI. We focused on these areas because they make up a set of candidate areas thought to be important for rats' capacity for complex visual object recognition behaviors (described in Chapter 1, and also see \ref{REFREF}). 
+
+First, we hoped to contribute an immensely powerful method to the existing body of literature on visual object recognition in rats. Several studies have characterized single-unit response properties of lateral extrastriate areas in rats that may be similar to those found in the primate ventral stream\cite{Tafazoli2017, Vermaercke2014, VinkenX, Vermaerke2015}. As such, we focused on areas 
+
+
+These areas hold a privileged position in the emerging field of rodent models of visual object recognition -- as such, it is also the case these areas are where the most known about single unit response properties in any extrastriate area of the rat\cite{Vermaercke2014, Tafazoli2017, Vinken2016, REFREF}. However, much less is known about more basic response properties of these visual areas. 
+
+% Figure:  Experimental design.
+\begin{figure}
+    \includegraphics[width=\textwidth]{figures/chapter_3/experiment_design/experiment_design.pdf}
+    \vspace{.1in}
+    \caption[Experiment design]{Experiment design for characterizing visual responses in rat lateral cortex. \textbf{A.} 
+    \label{fig:experiment_design}}
+\end{figure}
+
+
+We carried out the first comprehensive survey of visual response properties across these different cortical areas in rat extrastriate cortex. Specifically, we focused on areas V1, LM, and LI, where the most is known about single unit response properties in the rat. Using a large battery of visual stimuli, we characterized basic visual response properties of these areas for the first time with cellular resolution imaging. In the same sessions, we also tested a subset of the complex visual object stimuli used to test the perceptual behavior of rats (described in Chapter 1). At a broader level, that they may be capable of supporting visual object recognition behavior is an exciting starting point for combining the powerful tools common in traditional genetic models like mice with kinds of complex behaviors associated with primates.  
+
+
+
+
+\section{Identification of two-photon imaging sites}
+The wide-field area maps identified borders between visual areas as identified by mirror reflections of the retinotopic gradient. We used these area maps to determine which visual areas to target for two-photon imaging sessions. In order to register the two-photon maps to the wide-field maps, we acquired an anatomical volume at the start of each session. This was a surface-level z-stack that captured fiduciary markers in both channels: while the green channel was always used for functional runs (GCaMP), we used the red channel to acquire images of blood vessels filled with a temporary fluorescent dye that was injected at the start of each session (see Methods). If blood vessel images were unavailable, the green channel could be used for registration. 
+
+Two-photon blood vessel images were matched offline to the high-resolution images we took of the brain surface in each wide-field mapping session (Figure\ref{fig:retino_mapping}). We selected matching points between the two views based on uniquely identifiable blood vessels present in both images, then used these points to identify a transformation matrix to warp one into the other (see Methods).
+
+Each rat underwent localizer and functional runs (Figure\ref{fig:experiment_design}). Localizer runs were conducted on a day prior to full functional sessions. These sessions were used to identify which parts of the visual field corresponded to a given imaging site, targeted based on the surface-level vasculature and wide-field areal mapping (see Chapter 2 REFREF). We used two types of mapping protocols that targeted different scales of retinotopic organization. The first captured broad retinotopic preferences across the field-of-view using the same sweeping bar stimulus used to identify area borders in wide-field maps. 
+
+The second provided a more fine-scaled characterization of individual receptive fields for each neuron in the selected FOV (see Figure\ref{fig:rf_examples}). Since only a subset of the experiments used full-field stimuli, this latter method was critical for targeted stimulus presentation and avoided presenting stimuli at a location of the screen to which cells in the FOV were unresponsive. 
+
+Once a given FOV was identified as visually responsive, and the receptive field locations of the whole population could be identified, functional runs were conducted in subsequent days. We selected a battery of stimuli to provide a foundation for basic visual response properties in the lateral extrastriate areas of the rat. The final stimulus sets included drifting gratings of multiple orientations, spatial frequencies, and speeds, and a subset of the complex object stimuli used to test rats' perceptual behavior (as described in Chapter 1, REFREF). In addition, both of the localizer stimuli were re-tested in the same session as these functional runs.
+
 
 % ---------------------------------------------------------------
 % 2p retinotopy
@@ -44,36 +60,68 @@ We carried out the first comprehensive survey of visual response properties acro
 The particular region and extent of visual space that a patch of cortex represents has important implications for its function. For example, in primates, most areas of the ventral stream over-represent the central visual field, enhancing the processing of features near the fovea\cite{REFREF, Gattass2005CorticalDynamics}. Although mice, like rats, do not have foveal vision, several groups have shown consistent biases in visual field coverage in extrastriate visual areas of mice\cite{Garrett2014, Marshel2011, REFREF}. 
 
 % 2p retinotopy -------------------------------------------------
-% Retinotopic gradients + large, 2-area FOV
-Using the same phase-encoding Fourier paradigm we used to map visual areas at the macroscale, we characterized retinotopic preferences across a given imaging site, as well as at the single-cell level with two-photon calcium imaging. We observed retinotopic gradients across visual axes of elevation (ventral-dorsal) and azimuth (nasal-temporal) for large FOVs ($~1mm^2$) imaged in areas V1, LM, and LI (Figure\ref{fig:2p_retino}). As a proof-of-principle, we also tested how well two visual areas could be identified within our large-FOV ($1mm$ x $2mm$) mode, and found that a clear mirror reflection was visible when parking the objective directly above an areal boundary identified by the wide-field maps. 
+% fig:2p_retino (2p setup, coregistration, gradient, cortical mag)
+Using the same phase-encoding Fourier paradigm we used to map visual areas at the macroscale, we characterized retinotopic preferences across a given imaging site, as well as at the single-cell level with two-photon calcium imaging. This allowed us to quickly identify and validate that the expected retinotopic gradient was present across the two-photon FOV for an area initially targeted by surface vasculature (see Figure\ref{fig:2p_retino}) 
+
+% fig:2p_retino (Schematic, coregistration, retinotopy)
+\begin{figure}
+    \includegraphics[width=\textwidth]{figures/chapter_3/2p_retino/2p_retino.pdf}
+    \vspace{.1in}
+    \caption[Identification of areas with two-photon imaging]{Coregistration and area identification for two-photon imaging. \textbf{A.} Schematic of imaging experiments in awake, head-fixed rats. \textbf{B.} \textit{Left}: Wide-field image of the surface vasculature in the cranial window of an example rat. The overlay shows the co-registered anatomical image of the surface vasculature acquired by two-photon imaging. \textbf{C.} Example two-photon imaging field-of-view using the standard, large-FOV mode (scale bar, $100um$ REFREF). 
+    \label{fig:2p_retino}}
+\end{figure}
 
 % Cortical magnification
-To quantify how much cortex is devoted to a given unit of visual space in rat extrastriate areas, we measured cortical magnification in areas V1, LM and LI. Overall, we found that cortical magnification decreased from V1 to LM to LI, consistent with the expectation that larger areas have more cortical real estate for representing a given part of visual space (Figure\ref{fig:2p_retino}\textbf{a}). 
+We observed retinotopic gradients across visual axes of elevation (ventral-dorsal) and azimuth (nasal-temporal) for large two-photon FOVs ($~1mm^2$) imaged in areas V1, LM, and LI (Figure\ref{fig:2p_retino}). To quantify how much cortex is devoted to a given unit of visual space in rat extrastriate areas, we measured cortical magnification in areas V1, LM and LI. Overall, we found that cortical magnification decreased from V1 to LM to LI, consistent with the expectation that larger areas have more cortical real estate for representing a given part of visual space (Figure\ref{fig:2p_retino}\textbf{a}). 
 
 Cortical magnification is not necessarily isotropic, that is, along vertical (azimuth) and horizontal (elevation) axes of the visual field. For example, several studies report an expanded representation along the vertical dimension of visual space, relative to the horizontal dimension, in mouse V1\cite{Garrett2014, Liang2018, Bonin2011}.  
 
 Similar to previous studies of mouse V1, we found an asymmetric expansion along the vertical dimension of visual space in rat V1, but also in areas LM and LI (Figure\ref{fig:2p_retino}\textbf{b}). Moreover, we found that the degree to which the vertical dimension was over-represented was significantly greater for LM and LI than for V1 (LM: p<0.05, LI: p<0.01 REFREF).
 
-% Single-cell retinotopy / Retino scatter
-While previous studies have relied on coarse retinotopy to identify the areas in which they were recording, the fine-scale retinotopic organization of cell bodies in any extrastriate area remains unknown. Single sweeps of the stimulus evoked robust responses in individual cells, and overall, cell bodies exhibited a coarse-scale retinotopic organization. However, retinotopic preferences of neighboring cells were disordered and deviated from the surrounding neuropil in V1, LM and LI (Figure\ref{fig:2p_retino}) consistent with findings in mouse visual cortex \cite{Liang2018, Andermann2011, Marques2018}. 
+% Retino scatter
+While previous studies have relied on coarse retinotopy to identify the areas in which they were recording, the fine-scale retinotopic organization of cell bodies in any extrastriate area remains unknown. Single sweeps of the stimulus evoked robust responses in individual cells, and overall, cell bodies exhibited a coarse-scale retinotopic organization (Figure\ref{fig:2p_retino}). However, retinotopic preferences of neighboring cells were disordered and deviated from the surrounding neuropil in V1, LM and LI, consistent with findings in mouse visual cortex \cite{Liang2018, Andermann2011, Marques2018}. 
 
 % Receptive fields ------------------------
 In order to more finely characterize retinotopic preferences of individual cells, we quantified receptive field (RF) properties by stimulating tiled locations across the visual field (Figure\ref{fig:receptive_fields}). We mapped RFs in X\%, X\% and X\% of cells imaged in V1 (REFREF of REFREF neurons, REFREF imaging locations, REFREF rats), LM (REFREF), and LI (REFREF), respectively. Consistent with previous electrophysiology measures\cite{Vermaercke2014, Tafazoli2017}, receptive field sizes increased from V1 to LM to LI, though median sizes and relative differences were smaller than previous reports. 
 
+% fig:rf_examples
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_3/rf_examples/rf_examples.pdf}
+    \vspace{.1in}
+    \caption[Receptive field mapping]{Mapping receptive fields of single neurons. \textbf{A.} REFREF.
+    \label{fig:rf_examples}}
+\end{figure}
 
 The observed retinotopic scatter was ~2 fold larger for elevation than azimuth (REFREF V1: X in azimuth, X in elevation; Lm: X in azimuth, X in elevation; Li: X in azimuth, X in elevation), consistent with the observed axis differences in cortical magnification for all areas tested. The average cortical scatter in V1 ($~239.09um$), Lm ($163.48 um$), and Li ($127.17 um$) corresponded to average retinotopic displacements of  ~2.90, 5.30, and 6.45 degrees of visual angle -- roughly half or less than the average receptive field size of each visual area (REFREF, V1: ~9.49, Lm: ~10.61, LI: ~13.25 degrees of visual angle). Check, how does this compare to mouse (~20um AZ scatter and ~40um EL scatter, ~2deg)
+
+
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_3/rf_organization/rf_organization.pdf}
+    \vspace{.1in}
+    \caption[Fine-scale retinotopic organization]{Fine-scale retinotopic organization of lateral extrastriate cortex. \textbf{A.} REFREF.
+    \label{fig:rf_examples}}
+\end{figure}
 
 However, at the level of individual cells, we observed no correlation between receptive field size and retinotopic scatter (Figure\ref{fig:REFREF}, stats, Pearson’s correlation, V1: corrcoef, p=X, Lm: corrcoef, p=X, Li: corrcoef, p=X).
 
 % RFs are anisotropic, elongated along azimuth
-Given the observed asymmetry in cortical magnification along azimuth and elevation (see Figure\ref{fig:2p_retino}), we calculated the angle and degree of anisotropy for each receptive field to determine whether this bias was present at the level of individual cells.
+Given the observed asymmetry in cortical magnification along azimuth and elevation (see Figure\ref{fig:rf_organization}), we calculated the angle and degree of anisotropy for each receptive field to determine whether this bias was present at the level of individual cells.
 
-On average, receptive fields were anisotropic, with receptive field angles biased toward 0 degrees, that is, elongated along azimuth (Figure\ref{receptive_fields}). However, we did not observe a relationship between anisotropy and retinotopic scatter (REFREF, Supplemental 3.3) nor between angular bias in anisotropy (horizontally or vertically anisotropic, see Methods) and retinotopic position (REFREF, Supplemental 3.4).
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_3/rf_aggregate/rf_aggregate.pdf}
+    \vspace{.1in}
+    \caption[Receptive field properties]{Receptive field properties across lateral extrastriate cortex. \textbf{A.} REFREF.
+    \label{fig:rf_examples}}
+\end{figure}
+
+On average, receptive fields were anisotropic, with receptive field angles biased toward 0 degrees, that is, elongated along azimuth (Figure\ref{fig:rf_aggregate}). However, we did not observe a relationship between anisotropy and retinotopic scatter (REFREF, Supplemental 3.3) nor between angular bias in anisotropy (horizontally or vertically anisotropic, see Methods) and retinotopic position (REFREF, Supplemental 3.4). 
 
 % Maybe this is for better visual field coverage?
 Given these observed biases in receptive field angle or anisotropy, cortical magnification, and retinotopic scatter, we wondered whether these irregularities might allow, for example, enhanced visual coverage. For all simultaneously recorded cells in a given imaging site, we compared how the distribution of receptive fields across the visual field changed if all irregularities were corrected. 
 
 Specifically, to nullify retinotopic scatter, we assigned the predicted retinotopic position to each cell, and to nullify receptive field irregularities, we assigned size along each axis to be equal to the average of the two axes such that simulated receptive fields were perfectly isotropic ({\fig:Figure3a-b}). We calculated the variance of the distributions of RF counts across the visual field as a measure of how uniformly the receptive fields covered the visual field:  higher variance indicates RFs are clustered in select locations, while lower variance indicates RFs are evenly spread out ({\fig:Figure3c}). Overall, simulated RF distributions resulted in less uniform visual field coverage than measured RF distributions (paired test REFREF, {\fig:Figure3d} ). The fold-change in variance was greater than 1 (no difference) for X imaging sites ({\fig:Figure3e}, REFREF STATS).  
+
+
 
 
 \section{Orientation and direction tuning}
