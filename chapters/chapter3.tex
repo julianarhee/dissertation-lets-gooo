@@ -4,9 +4,13 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 \end{savequote}
 
 \chapter{Basic characterizations}
-% Figure:  2p_retino / cortical mag 
-% Figure:  RF mapping, examples
-% Figure:  RFs, aggregate/summary plots
+% fig:2p_retino
+% fig:rf_examples
+% fig:retino_scatter
+% fig:rf_aggregate
+% fig:vf_coverage
+
+
 % Figure:  GRATINGS, stimuli + example traces
 % Figure:  Summary stats of OSI, DSI, "Fraction tuned"
 % Figure:  RFs + ORI preferences
@@ -20,12 +24,9 @@ Despite the fact that animals with the best vision, like cats or monkeys, have b
 In contrast, although rats have long been studied for visually-guided behaviors, large-scale cellular resolution access to their visual cortex has proved to be far more challenging. Our broad-level goal is to bridge the gap between neural circuit access and rich behavioral capacities in the rat. What has remained lacking is a basic characterization of any visual area beyond V1 in the rat. Such a systematic study provides valuable points of comparison not just with primates, but with other animal models, including mice. 
 
 % Broad overview of experiment design
-Two overarching goals shaped our experimental design (Figure\ref{fig:experiment_design}). First, we sought to provide the first characterization of basic, visual response properties of areas V1, LM, and LI. We focused on these areas because they make up a set of candidate areas thought to be important for rats' capacity for complex visual object recognition behaviors (described in Chapter 1, and also see \ref{REFREF}). 
+Two overarching goals shaped our experimental design (Figure\ref{fig:experiment_design}). First, we hoped to contribute an immensely powerful method to the existing body of literature on visual object recognition in rats. Several studies have characterized single-unit response properties of lateral extrastriate areas in rats that may be similar to those found in the primate ventral stream\cite{Tafazoli2017, Vermaercke2014, VinkenX, Vermaerke2015}. As such, we also know relatively more about single-unit response properties in these lateral areas than in any other extrastriate area of the rat\cite{Vermaercke2014, Tafazoli2017, Vinken2016, REFREF}. To be able to compare our findings with previous electrophysiology studies, we focused on areas V1, LM, and LI. 
 
-First, we hoped to contribute an immensely powerful method to the existing body of literature on visual object recognition in rats. Several studies have characterized single-unit response properties of lateral extrastriate areas in rats that may be similar to those found in the primate ventral stream\cite{Tafazoli2017, Vermaercke2014, VinkenX, Vermaerke2015}. As such, we focused on areas 
-
-
-These areas hold a privileged position in the emerging field of rodent models of visual object recognition -- as such, it is also the case these areas are where the most known about single unit response properties in any extrastriate area of the rat\cite{Vermaercke2014, Tafazoli2017, Vinken2016, REFREF}. However, much less is known about more basic response properties of these visual areas. 
+At the same time, much less is known about more basic response properties of these visual areas. As a parallel goal, we sought to provide a first comprehensive survey of basic, visual response properties across these different cortical areas in the rat using optical imaging. 
 
 % Figure:  Experimental design.
 \begin{figure}
@@ -35,20 +36,15 @@ These areas hold a privileged position in the emerging field of rodent models of
     \label{fig:experiment_design}}
 \end{figure}
 
-
-We carried out the first comprehensive survey of visual response properties across these different cortical areas in rat extrastriate cortex. Specifically, we focused on areas V1, LM, and LI, where the most is known about single unit response properties in the rat. Using a large battery of visual stimuli, we characterized basic visual response properties of these areas for the first time with cellular resolution imaging. In the same sessions, we also tested a subset of the complex visual object stimuli used to test the perceptual behavior of rats (described in Chapter 1). At a broader level, that they may be capable of supporting visual object recognition behavior is an exciting starting point for combining the powerful tools common in traditional genetic models like mice with kinds of complex behaviors associated with primates.  
-
-
-
+Using a large battery of visual stimuli, we characterized basic visual response properties of these areas for the first time with cellular resolution imaging. In the same sessions, we also tested a subset of the complex visual object stimuli used to test the perceptual behavior of rats (described in Chapter 1). At a broader level, that they may be capable of supporting visual object recognition behavior is an exciting starting point for combining the powerful tools common in traditional genetic models like mice with kinds of complex behaviors associated with primates.  
 
 \section{Identification of two-photon imaging sites}
 The wide-field area maps identified borders between visual areas as identified by mirror reflections of the retinotopic gradient. We used these area maps to determine which visual areas to target for two-photon imaging sessions. In order to register the two-photon maps to the wide-field maps, we acquired an anatomical volume at the start of each session. This was a surface-level z-stack that captured fiduciary markers in both channels: while the green channel was always used for functional runs (GCaMP), we used the red channel to acquire images of blood vessels filled with a temporary fluorescent dye that was injected at the start of each session (see Methods). If blood vessel images were unavailable, the green channel could be used for registration. 
 
-Two-photon blood vessel images were matched offline to the high-resolution images we took of the brain surface in each wide-field mapping session (Figure\ref{fig:retino_mapping}). We selected matching points between the two views based on uniquely identifiable blood vessels present in both images, then used these points to identify a transformation matrix to warp one into the other (see Methods).
+Each rat underwent localizer and functional runs (Figure\ref{fig:experiment_design}). Localizer runs were conducted on a day prior to full functional sessions. These sessions were used to identify which parts of the visual field corresponded to a given imaging site, targeted based on the surface-level vasculature and wide-field areal mapping (see Chapter 2 REFREF). Two-photon vasculature images were matched offline to the high-resolution images we took of the brain surface in each wide-field mapping session (Figure\ref{fig:2p_retino}). We selected matching points between the two views based on uniquely identifiable blood vessels present in both images, then used these points to identify a transformation matrix to warp one into the other (see Methods).
 
-Each rat underwent localizer and functional runs (Figure\ref{fig:experiment_design}). Localizer runs were conducted on a day prior to full functional sessions. These sessions were used to identify which parts of the visual field corresponded to a given imaging site, targeted based on the surface-level vasculature and wide-field areal mapping (see Chapter 2 REFREF). We used two types of mapping protocols that targeted different scales of retinotopic organization. The first captured broad retinotopic preferences across the field-of-view using the same sweeping bar stimulus used to identify area borders in wide-field maps. 
 
-The second provided a more fine-scaled characterization of individual receptive fields for each neuron in the selected FOV (see Figure\ref{fig:rf_examples}). Since only a subset of the experiments used full-field stimuli, this latter method was critical for targeted stimulus presentation and avoided presenting stimuli at a location of the screen to which cells in the FOV were unresponsive. 
+We used two types of mapping protocols that targeted different scales of retinotopic organization. The first captured broad retinotopic preferences across the field-of-view using the same sweeping bar stimulus used to identify area borders in wide-field maps. The second provided a more fine-scaled characterization of individual receptive fields for each neuron in the selected FOV. In addition, since only a subset of the experiments used full-field stimuli, it was important to accurately identify the region of visual space to which most cells in a given FOV were responsive and target the stimulus presentation there. 
 
 Once a given FOV was identified as visually responsive, and the receptive field locations of the whole population could be identified, functional runs were conducted in subsequent days. We selected a battery of stimuli to provide a foundation for basic visual response properties in the lateral extrastriate areas of the rat. The final stimulus sets included drifting gratings of multiple orientations, spatial frequencies, and speeds, and a subset of the complex object stimuli used to test rats' perceptual behavior (as described in Chapter 1, REFREF). In addition, both of the localizer stimuli were re-tested in the same session as these functional runs.
 
@@ -61,7 +57,7 @@ The particular region and extent of visual space that a patch of cortex represen
 
 % 2p retinotopy -------------------------------------------------
 % fig:2p_retino (2p setup, coregistration, gradient, cortical mag)
-Using the same phase-encoding Fourier paradigm we used to map visual areas at the macroscale, we characterized retinotopic preferences across a given imaging site, as well as at the single-cell level with two-photon calcium imaging. This allowed us to quickly identify and validate that the expected retinotopic gradient was present across the two-photon FOV for an area initially targeted by surface vasculature (see Figure\ref{fig:2p_retino}) 
+Using the same phase-encoding Fourier paradigm we used to map visual areas at the macroscale, we characterized retinotopic preferences across a given imaging site, as well as at the single-cell level with two-photon calcium imaging. This allowed us to quickly identify and validate that the expected retinotopic gradient was present across the two-photon FOV for an area initially targeted by surface vasculature (see Figure\ref{fig:2p_retino}).
 
 % fig:2p_retino (Schematic, coregistration, retinotopy)
 \begin{figure}
@@ -78,11 +74,16 @@ Cortical magnification is not necessarily isotropic, that is, along vertical (az
 
 Similar to previous studies of mouse V1, we found an asymmetric expansion along the vertical dimension of visual space in rat V1, but also in areas LM and LI (Figure\ref{fig:2p_retino}\textbf{b}). Moreover, we found that the degree to which the vertical dimension was over-represented was significantly greater for LM and LI than for V1 (LM: p<0.05, LI: p<0.01 REFREF).
 
-% Retino scatter
-While previous studies have relied on coarse retinotopy to identify the areas in which they were recording, the fine-scale retinotopic organization of cell bodies in any extrastriate area remains unknown. Single sweeps of the stimulus evoked robust responses in individual cells, and overall, cell bodies exhibited a coarse-scale retinotopic organization (Figure\ref{fig:2p_retino}). However, retinotopic preferences of neighboring cells were disordered and deviated from the surrounding neuropil in V1, LM and LI, consistent with findings in mouse visual cortex \cite{Liang2018, Andermann2011, Marques2018}. 
+% ---------------------------------------------------------------
+% Receptive fields + scatter
+% ---------------------------------------------------------------
+% fig:rf_examples
+% fig:retino_scatter
+% fig:rf_aggregate
+% fig:vf_coverage
 
-% Receptive fields ------------------------
-In order to more finely characterize retinotopic preferences of individual cells, we quantified receptive field (RF) properties by stimulating tiled locations across the visual field (Figure\ref{fig:receptive_fields}). We mapped RFs in X\%, X\% and X\% of cells imaged in V1 (REFREF of REFREF neurons, REFREF imaging locations, REFREF rats), LM (REFREF), and LI (REFREF), respectively. Consistent with previous electrophysiology measures\cite{Vermaercke2014, Tafazoli2017}, receptive field sizes increased from V1 to LM to LI, though median sizes and relative differences were smaller than previous reports. 
+% Retino scatter
+While previous studies have relied on coarse retinotopy to identify the areas in which they were recording, the fine-scale retinotopic organization of cell bodies in any extrastriate area remains unknown. REFREF Previous studies in mouse visual areas indicate the presence of a fine-scale retinotopic scatter from retinal ganglion cell (RGC) inputs, through the lateral geniculate nucleus (LGN), and into V1 and LM\cite{Liang2018, Andermann2011, Marques2018}. However, it remains unknown whether this scatter is present in other extrastriate areas of rodent cortex, whether and to what extent rat visual areas also exhibit scatter, and whether this is functionally advantageous in any way or random biological noise.
 
 % fig:rf_examples
 \begin{figure}[t!]
@@ -92,20 +93,40 @@ In order to more finely characterize retinotopic preferences of individual cells
     \label{fig:rf_examples}}
 \end{figure}
 
-The observed retinotopic scatter was ~2 fold larger for elevation than azimuth (REFREF V1: X in azimuth, X in elevation; Lm: X in azimuth, X in elevation; Li: X in azimuth, X in elevation), consistent with the observed axis differences in cortical magnification for all areas tested. The average cortical scatter in V1 ($~239.09um$), Lm ($163.48 um$), and Li ($127.17 um$) corresponded to average retinotopic displacements of  ~2.90, 5.30, and 6.45 degrees of visual angle -- roughly half or less than the average receptive field size of each visual area (REFREF, V1: ~9.49, Lm: ~10.61, LI: ~13.25 degrees of visual angle). Check, how does this compare to mouse (~20um AZ scatter and ~40um EL scatter, ~2deg)
+In order to more finely characterize retinotopic preferences of individual cells, we quantified receptive field (RF) properties by stimulating tiled locations across the visual field (Figure\ref{fig:rf_examples}).
 
+% RF size -- why 
+We used tile sizes of 5 or 10 degrees of visual angle. 
+
+ We mapped RFs in X\%, X\% and X\% of cells imaged in V1 (REFREF of REFREF neurons, REFREF imaging locations, REFREF rats), LM (REFREF), and LI (REFREF), respectively. 
+ 
+% average cortical scatter
+Cell bodies exhibited a coarse-scale retinotopic organization. However, at the level of neighboring cells, retinotopic preferences were disordered and deviated from the expected preferences based on relative cortical location (Figure\ref{fig:retino_scatter}).
 
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_3/rf_organization/rf_organization.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_3/retino_scatter/retino_scatter.pdf}
     \vspace{.1in}
     \caption[Fine-scale retinotopic organization]{Fine-scale retinotopic organization of lateral extrastriate cortex. \textbf{A.} REFREF.
-    \label{fig:rf_examples}}
+    \label{fig:retino_scatter}}
 \end{figure}
 
-However, at the level of individual cells, we observed no correlation between receptive field size and retinotopic scatter (Figure\ref{fig:REFREF}, stats, Pearson’s correlation, V1: corrcoef, p=X, Lm: corrcoef, p=X, Li: corrcoef, p=X).
+The average cortical scatter in V1 ($~239.09um$), Lm ($163.48 um$), and Li ($127.17 um$) corresponded to average retinotopic displacements of  ~2.90, 5.30, and 6.45 degrees of visual angle --- roughly half or less than the average receptive field size of each visual area (REFREF, V1: ~9.49, Lm: ~10.61, LI: ~13.25 degrees of visual angle). However, at the level of individual cells, we observed no correlation between receptive field size and retinotopic scatter (Supp Figure REFREF), stats, Pearson’s correlation, V1: REFREF, p=REFREF, Lm: REFREF, p=REFREF, Li: REFREF, p=REFREF).
 
+% asymmetric scatter
+The observed retinotopic scatter was asymmetric between vertical and horizontal dimensions, as well:  deviation from predicated cortical locations was ~2 fold larger along elevation than azimuth (V1: REFREF in azimuth, REFREF in elevation; Lm: REFREF in azimuth, REFREF in elevation; Li: REFREF in azimuth, REFREF in elevation), consistent with the observed axis asymmetry in cortical magnification for all areas tested based on smoothed neuropil estimates. 
+
+% Scatter of ~150um in azimuth and ~300um in elevation corresponded to average retinotopic displacements of roughly ~3deg along both azimuth and elevation visual field positions.
+Though average retinotopic displacements were similar along azimuth and elevation, roughly 3 degrees of visual angle, the corresponding scatter at the level of neighboring cells was greater for elevation (~250um) than azimuth (~150um REFREF). This suggests ..
+
+% ---------------------------------------------------------------
+% RF properties
+% ---------------------------------------------------------------
 % RFs are anisotropic, elongated along azimuth
-Given the observed asymmetry in cortical magnification along azimuth and elevation (see Figure\ref{fig:rf_organization}), we calculated the angle and degree of anisotropy for each receptive field to determine whether this bias was present at the level of individual cells.
+Given the observed asymmetry in cortical magnification along azimuth and elevation (see Figure\ref{fig:retino_scatter}), we asked whether this asymmetry was present at the level of individual cells. 
+
+Consistent with previous electrophysiology measures\cite{Vermaercke2014, Tafazoli2017}, overall receptive field sizes increased from V1 to LM to LI (REFREF). Interestingly, most receptive fields exhibited some degree of anisotropy, with receptive field angles biased toward 0 degrees, that is, elongated along azimuth (Figure\ref{fig:rf_aggregate}). 
+% However, we did not observe strong relationships between anisotropy and retinotopic scatter (REFREF, Supplemental 3.3) nor between angular bias in anisotropy (horizontally or vertically anisotropic, see Methods) and retinotopic position (REFREF, Supplemental 3.4). 
+-Sit & Goard, bias for cells representing LOWER visual field, stronger coherent motion response -- spatial asymmetry in motion representation/sensitivity
 
 \begin{figure}[t!]
     \includegraphics[width=\textwidth]{figures/chapter_3/rf_aggregate/rf_aggregate.pdf}
@@ -114,31 +135,52 @@ Given the observed asymmetry in cortical magnification along azimuth and elevati
     \label{fig:rf_examples}}
 \end{figure}
 
-On average, receptive fields were anisotropic, with receptive field angles biased toward 0 degrees, that is, elongated along azimuth (Figure\ref{fig:rf_aggregate}). However, we did not observe a relationship between anisotropy and retinotopic scatter (REFREF, Supplemental 3.3) nor between angular bias in anisotropy (horizontally or vertically anisotropic, see Methods) and retinotopic position (REFREF, Supplemental 3.4). 
+% Spherical correction check
+To confirm that the observed receptive field anistropy was not simply due to variable screen distance, we calculate the same metrics with a spherical correction. Typically, in visual field mapping studies, the screen is close enough to the animal's eye that significant warping can occur at the edges of the visual field, relative to the portions directly in front of the animal, producing a "fishbowl" effect. Experimenters often correct for this distortion by presenting an inversely distorted stimulus, effectively reversing the warped appearance (see Figure\ref{fig:spherical_correction}). 
+
+Alternatively, the stimuli can be presented as is, on the flat monitor, and the measured responses can be transformed according to the predicted perceived distortion. Using this transformation, we found little to no qualitative difference in the relative receptive field metrics:  receptive field sizes increased from V1 to LM to LI, receptive fields were anisotropic in all three areas, and this anisotropy was largely biased toward elongations along the horizontal axis (SUPPFIGURE REFREF).
 
 % Maybe this is for better visual field coverage?
 Given these observed biases in receptive field angle or anisotropy, cortical magnification, and retinotopic scatter, we wondered whether these irregularities might allow, for example, enhanced visual coverage. For all simultaneously recorded cells in a given imaging site, we compared how the distribution of receptive fields across the visual field changed if all irregularities were corrected. 
 
-Specifically, to nullify retinotopic scatter, we assigned the predicted retinotopic position to each cell, and to nullify receptive field irregularities, we assigned size along each axis to be equal to the average of the two axes such that simulated receptive fields were perfectly isotropic ({\fig:Figure3a-b}). We calculated the variance of the distributions of RF counts across the visual field as a measure of how uniformly the receptive fields covered the visual field:  higher variance indicates RFs are clustered in select locations, while lower variance indicates RFs are evenly spread out ({\fig:Figure3c}). Overall, simulated RF distributions resulted in less uniform visual field coverage than measured RF distributions (paired test REFREF, {\fig:Figure3d} ). The fold-change in variance was greater than 1 (no difference) for X imaging sites ({\fig:Figure3e}, REFREF STATS).  
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_3/vf_coverage/vf_coverage.pdf}
+    \vspace{.1in}
+    \caption[Compensatory visual field coverage]{Gains in visual field coverage due to scatter. \textbf{A.} REFREF.
+    \label{fig:vf_coverage}}
+\end{figure}
+
+Specifically, to nullify retinotopic scatter, we assigned the predicted retinotopic position to each cell, and to nullify receptive field irregularities, we assigned size along each axis to be equal to the average of the two axes such that simulated receptive fields were perfectly isotropic (Figure\ref{fig:vf_coverage}). We calculated the variance of the distributions of RF counts across the visual field as a measure of how uniformly the receptive fields covered the visual field:  higher variance indicates RFs are clustered in select locations, while lower variance indicates RFs are evenly spread out (Figure\ref{fig:vf_coverage}). 
+
+Overall, simulated RF distributions resulted in a less uniform visual field coverage than measured RF distributions (paired test REFREF, Figure\ref{fig:vf_coverage}). The fold-change in variance was greater than 1 (no difference) for all imaging sites (REFREF). %NO difference between areas?
 
 
 
-
+% ---------------------------------------------------------------
+% Gratings
+% ---------------------------------------------------------------
 \section{Orientation and direction tuning}
-Since we did not observe retinotopic organization at the REFREF um scale, we asked whether neurons might be organized by tuning to other visual features. We measured calcium responses to drifting gratings of a range of directions, spatial frequencies, speeds, and sizes (see Methods). 
+Since we did not observe retinotopic organization at the REFREF um scale, we asked whether neurons might be organized by tuning to other visual features. In highly visual animals, like primates and cats, orientation tuning exhibits a spatial organization in which columns of cortex show repeating "pinwheel" structures of preferred orientations\cite{REFREF}. In contrast, studies of rodent visual cortex have shown a disorganized, "salt-and-pepper" organization\cite{Ohki2005, REFREF}, even in more visual rodents like the squirrel\cite{VanHooser2005FunctionalRodent, REFREF}. The lack of clear global structure in one but the presence of clear orientation selectivity in both rodents and primates suggests that they represent alternative paths to achieving the same functionality.
 
-Visually responsive cells were classified as responsive to a given direction of motion (direction-selective, DS), or to opposing directions of motion along a given axis (axis-selective, AS), or neither direction- or axis-selective. Overall, we found a decreasing fraction of tuned cells across the areas tested {\fig:Figure}. Splitting direction- and axis-selective cells by visual area revealed that this decrease was largely due to a decrease in the fraction of axis-selective (FIGURE). In contrast, the fraction of direction-selective neurons was not significantly different between areas (STATS).   
+To expand on known characteristics in rodent V1 to extrastriate areas in the rat, we measured calcium responses to drifting gratings of a range of directions, spatial frequencies, speeds, and sizes (Figure\ref{fig:gratings_examples}). 
 
-On average, the fraction of cells tuned for direction or orientation decreased from V1 to Li ({\fig:Figure4c}, REFREF, stats). This decrease in gratings tuning was largely driven by fewer axis-selective cells in Li ({\fig:Figure4d}, REFREF, stats). 
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_3/gratings_example/gratings_examples.pdf}
+    \vspace{.1in}
+    \caption[Compensatory visual field coverage]{Receptive field properties across lateral extrastriate cortex. \textbf{A.} REFREF.
+    \label{fig:gratings_examples}}
+\end{figure}
 
-V1 prefers horizontally-oriented gratings (either direction). L/Lm don’t show this bias as much (what’s the right test here). REFREF
+Visually responsive cells were classified as responsive to a given direction of motion (direction-selective, DS), or to opposing directions of motion along a given axis (axis-selective, AS), or neither direction- or axis-selective (see Methods). Overall, we found that the fraction of cells tuned to orientation or direction decreased from areas V1 to LM to LI REFREF (Figure\ref{fig:osi_dsi}). This decrease in gratings tuning was largely driven by a decreases in the number of axis-selective cells in Li (REFREF). The fraction of direction-selective neurons was not significantly different between areas (REFREF).   
+
+% Orientating tuning similarity v distance?
+Consistent with previous studies in rats and other rodents, we found a rough salt-and-pepper organization in V1 FOVs, as well as LM and LI FOVs (REFREF). 
+If visual areas exhibit a purely salt-and-pepper organization, tuning similarity and cortical distance should be statistically independent. To quantify the similarity in tuning between cells, we created an average tuning profile for each cell, defined as the trial-averaged response to each condition, and measured similarity as the correlation coefficient between tuning profiles (Methods). The cortical distance between cells was defined as the distance between each cell’s center of mass in the image plane. 
+
+Rather than a purely random organization of orientation preferences, we found a decrease in tuning similarity as a function of distance (REFREF, Pearons’s correlation coefficient, r=REFREF (V1, p=REFREF; Lm, p=REFREF; Li=p=REFREF)). 
 
 
-To measure the similarity in tuning between cells, we created an average tuning profile for each cell, defined as the trial-averaged response to each condition, and measured similarity as the correlation coefficient between tuning profiles (Methods). The cortical distance between cells was defined as the distance between each cell’s center of mass in the image plane. 
-
-If visual areas exhibit a purely salt-and-pepper organization, tuning similarity and cortical distance should be statistically independent. However, we found a decrease in tuning similarity as a function of distance (REFREF, Pearons’s correlation coefficient, r=X (V1, p=#; Lm, p=#; Li=p=#)). Fit the curves with exponential or linear functions. 
-
-Signal correlations vs. %-overlap?.
+% Signal correlations vs. percent-overlap?.
 Other standard measures, for ex., broadness/sharpness?
 
 
