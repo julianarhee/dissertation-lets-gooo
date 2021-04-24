@@ -18,8 +18,14 @@ In contrast, several groups in fields outside of vision have demonstrated the im
 % $$\zeta = \frac{1039}{\pi}$$
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% OpenRatBox
+% Results
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fig:openratbox
+% fig:basic_training
+% fig:behavior_generalization
+
+% ---------------------------------------------------------
+% OpenRatBox -- the hardware.
 \section{OpenRatBox: An open-source platform for high-throughput behavior}
 Our approach was to design a visual behavior system that was reproducible, low-cost, and modular. It was critical to design training boxes that would be straightforward to reproduce, not only to maintain constancy from one box to the next, but also to facilitate widespread use both within the lab and across labs. Systematization across research groups can be immensely powerful, especially for studying highly complex, multi-modal processes like decision-making, as exemplified by the International Brain Laboratory\cite{IBL} and the Allen Brain Institute\cite{REFREF}.
 
@@ -31,7 +37,7 @@ Modularity is important because a given behavior can be tested under different r
 \begin{figure}[t!]
     \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-1_openratbox/openratbox.pdf}
     \vspace{.1in}
-    \caption[OpenRatBox]{OpenRatBox: Open-source, automated, high-throughput training. \textbf{A.} One training box. Parts: 1. Home cage, 2. Sensors and reward ports, 3. USB camera and IR detector, 4. Monitor, 5. Solenoid valves, 6. Tubing and wiring leads out of the vestibule, etc. \textbf{B.} A full tower assembly of four identical training boxes. 
+    \caption[OpenRatBox]{OpenRatBox: Open-source, automated, high-throughput training. \textbf{A.} Top, Schematic of one training box. Numbers denote relevant parts. Bottom inset, Logic of experimental control: an independent server on each box (here, showing 4 boxes per tower, with a total of 5 towers used for the present study) runs a specified experiment, and a main control computer with a client allows full control of each box. Left, A full tower assembly of four identical training boxes. \textbf{B.} A view of a room of towers used to train the animals in the present work. \textbf{C.} Plug-and-play components can be swapped out for different task paradigms. \textbf{D.} Boxes equipped with a commutator can house tethered animals for chronic neural stimulation or recording experiments.  
     \label{fig:openratbox}}
 \end{figure}
 
@@ -43,32 +49,34 @@ During visual behavior sessions, the animal has access to the reward ports and m
 
 Finally, the entire system can be equipped for neural stimulation and recording in tethered rats. The spacing between the stacked boxes creates sufficient room for a commutator system that carries a cable from the animal's head through a hole in the acrylic ceiling of the main vestibule (Figure\ref{fig:openratbox}\textbf{D}). Though we tested both Go/No-Go and two-choice behavior paradigms, we selected the latter for the remainder of our behavior studies (see Discussion) as this is a well-established paradigm used to test visual object recognition behavior in rats\cite{Lashley1930, Zoccolan2009, Prusky2000, REFREF}. 
 
-\section{High-throughput training}
-% FIGURE 1.2 Basic 2-choice task, high throughput
-% fig:
-We trained rats to perform a simple, two-category object discrimination task\cite{Zoccolan2009}. This is a three-port paradigm in which rats lick the center port to initiate trials, and one of the two flanking ports to indicate which object is on the screen. Rats initiated each trial by licking the middle of three capacitive lick ports, which triggered the appearance of one static visual object (1 of the two object categories) on the screen (see Methods for details). The rats indicated which visual object was present by licking one port, \textit{e.g.}, the left port, for object A, and the other \textit{e.g.}, for object B, with stimulus-port mappings counterbalanced across animals.  
+% ---------------------------------------------------------
+% OpenRatBox -- the functionality (high-throughput training)
+\section{High-throughput behavior training}
+We trained rats to perform a simple, two-category object discrimination task\cite{Zoccolan2009} (Figure\ref{fig:basic_training}\textbf{A}). This is a three-port paradigm in which rats lick the center port to initiate trials, and one of the two flanking ports to indicate which object is on the screen. Rats initiated each trial by licking the middle of three capacitive lick ports, which triggered the appearance of one static visual object (1 of the two object categories) on the screen (see Methods for details). The rats indicated which visual object was present by licking one port, \textit{e.g.}, the left port, for object A, and the other \textit{e.g.}, for object B, with stimulus-port mappings counterbalanced across animals (Figure\ref{fig:basic_training}\textbf{B}).
 
 % FIGURE 1.1 Basic training
 \begin{figure}[t!]
     \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-2_basic_training/basic_training.pdf}
     \vspace{.1in}
-    \caption[High-throughput training]{High-throughput training on a simple two-alternative choice task. \textbf{A.} One training box. Parts: 1. Home cage, 2. Sensors and reward ports, 3. USB camera and IR detector, 4. Monitor, 5. Solenoid valves, 6. Tubing and wiring leads out of the vestibule, etc. \textbf{B.} A full tower assembly of four identical training boxes. 
+    \caption[High-throughput training]{High-throughput training on a simple two-alternative choice task. \textbf{A.} Logic of the basic, two-category object discrimination task. \textbf{B.} Trial structure. \textbf{C.} Example training data from one rat. Black, overall accuracy as a function of training session number. Gray, Number of trials completed in each session. \textbf{D.} Accuracy for each of the two objects for the example rat shown in \textbf{C}. \textbf{E.} Overall accuracy for a large cohort of animals (N=REFREF rats) as a function of training session. \textbf{F.} Top, Accuracy for each box and each tower. Each group, indicated by brackets, represents one tower of 4 boxes (4 towers shown), with the leftmost group of points corresponding to the highest box, and the rightmost points. Bottom, Number of trials performed per session for each box and tower. Notation as in the upper panel.
     \label{fig:basic_training}}
 \end{figure}
 
 Animals could be trained to perform shape discriminations for reasonably dissimilar objects in one month or less, and readily performed several hundred trials per day in the automated training rig (Figure\ref{fig:basic_training}). Importantly, overall behavior metrics were similar across all behavior box units and towers. We observed no differences in overall accuracy, accuracy by port assignment, or number of trials completed per session. Almost all rats reached criterion for the appropriate stimulus-port pairing within REFREF sessions (Figure\ref{fig:basic_training}). Trained rats performed with high accuracy for both objects (average REFREF +/- std, n=32/34 rats reached criterion performance of 70\% correct across REFREF +/- STD sessions). These results demonstrate that our behavior units are reproducible and successful for training large cohorts of animals. 
 
-
+% ---------------------------------------------------------
+% Behavior Generalization
 \section{Tests of visual object discrimination and recognition}
-Previous studies have demonstrated that rats are capable of recognizing never-before-seen views of objects familiar objects\cite{Zoccolan2009, Vermaercke2012, Tafazoli2012Transformation-TolerantPriming, REFREF}. Our goal was to validate that rats will perform these behaviors in our high-throughput system. Using OpenRatBox, we tested how rats generalize across two types of transformations: the first was a psychophysical test, by which we identified rats’ discrimination thresholds separating one object from another, and the second was an invariant recognition test {\fig: Figure1g-i}, where rats had to discriminate objects across changes in particular views. 
+Previous studies have demonstrated that rats are capable of recognizing never-before-seen views of objects familiar objects\cite{Zoccolan2009, Vermaercke2012, Tafazoli2012Transformation-TolerantPriming, REFREF}. Our goal was to validate that rats will perform these behaviors in our high-throughput system. Using OpenRatBox, we tested how rats generalize across two types of transformations: the first was a psychophysical test, by which we identified rats’ discrimination thresholds separating one object from another, and the second was an invariant recognition test, where rats had to discriminate objects across changes in particular views (Figure\ref{fig:behavior_generalization}). 
 
 Once rats reliably discriminated between the two objects, we then tested on their ability to generalize across two types of transformations. To identify perceptual discrimination thresholds separating the two objects, we tested identity-changing transformations in which images were parametrically varied between the two original objects at a given view.
 
-% FIGURE 1.4 MORPHS
+% FIGURE 1.3 Behavior generalization.
 \begin{figure}
-\includegraphics[width=\textwidth]{figures/fig1}
-\caption[Short figure name.]{This is a figure that floats inline and here is its caption.
-\label{fig:myInlineFigure}}
+\includegraphics[width=\textwidth]{figures/fig_1-3_behavior_generalization/behavior_generalization.pdf}
+    \vspace{.1in}
+    \caption[Generalization of visual behavior]{Generalization to identity-preserving and identity-changing transformations. \textbf{A.} Training and testing design. \textbf{B.} Morph stimuli create an axis along which identity changes. \textbf{C.} Example rat, with psychometric curve. \textbf{D.} Pyschometric curves for one cohort (N=10 rats).\textbf{E.} Metrics of category boundaries based on perceptual choices.  
+    \label{fig:behavior_generalization}}
 \end{figure}
 
 Specifically, we created a shape continuum by generating a series of morphs that varied along a high-dimensional identity axis separating the two original objects (as shown in Figure\ref{fig:morphs}). The identity axis was defined in N-dimensional pixel space, and morphs were selected to evenly sample distances along this axis (see Methods). We then tested the extent to which linear similarity in pixel space reflected perceived similarity in rats trained to discriminate the two anchor objects. 
@@ -76,6 +84,19 @@ Specifically, we created a shape continuum by generating a series of morphs that
 Rats were presented with a morph image on a small fraction of trials (<15\%, see Methods) during the ordinary discrimination task. No feedback was provided on these probe trials in order to measure perceived, rather than trained, perceptual judgements. These probe trials were then used to build up a psychophysical curve to determine the animals' naive behavior in classifying the objects as ``A'' or ``B''. We fit a psychometric curve to the probe trials using maximum likelihood estimation (psignifit4, REFREF, see Methods). These curves characterize the category boundary along the morph axis. We found that that rats perceptual choices matched the physical similarity of the morphed objects, though there was individual variation across rats (slope, REFREF +/- ; threshold, REFREF +/- SEM; lapse rate, REFREF +/- SEM, across n=10 rats). 
 
 % FIGURE 1.3 INVARIANCE TEST
+To test how well animals discriminate objects across shape changes that preserve object identity, we tested the same rats on an object recognition task. Consistent with previous studies\cite{Zoccolan2009, Tafazoli2012Transformation-TolerantPriming, REFREF}, we found that performance generalized robustly across identity-preserving transformations, such as changes in size and in-depth rotation (Figure\ref{fig:behavior_generalization}\textbf{e}). Importantly, accuracy was high on test trials (~80\% accuracy, mean REFREF +/- std, n=REFREF rats), where animals never received feedback (Figure\ref{fig:behavior_generalization}\textbf{F-G}), demonstrating that performance on novel views was spontaneous, rather than learned. In fact, accuracy was high across all presentations of novel views, with or without feedback (Figure\ref{fig:behavior_generalization}\textbf{H}). These results demonstrate that rats are capable of true generalization, and are not simply learning stimulus-response pairings. 
+
+% ---------------------------------------------------------
+% Closing remarks
+\section{Discussion?}
+High-throughput behavior is important for practical reasons, but also scientific ones. 
+Standardization is important. 
+
+We found that rats readily perform hundreds of trials per day in our behavior system and learn difficult visual tasks in 2-3 weeks. We use OpenRatBox to show that rats robustly generalize to novel views of objects, i.e., across identity-preserving transformations, and make perceptual choices that follow our morph axis of identity transformations. While similar behavioral results have been shown previously\cite{Zoccolan2009, Tafazoli2012Transformation-TolerantPriming, Vermaercke2012}, here, we demonstrate that a) we can replicate these results with our high-throughput behavior system, and b) in response to our particular stimuli, rats respond correctly in the absence of training on the transformations (no feedback conditions and morph probe trials). We will use the same stimuli when characterizing neural representations in naive rats in a later chapter. 
+
+In Go/No-Go (GNG) paradigms, the animal responds to a given stimulus (the "Go" condition) by licking a choice port or pressing a lever, and must withhold a response otherwise (the "No-Go" condition). GNG paradigms have fewer moving parts, requiring only one response type, which can make it easier to learn. However, subjects tend to make more Go responses in the GNG task, as the Go response is rewarded while other other behaviors are not\cite{REFREF}. 
+
+For physiology experiments, GNG paradigms are more amenable to head-restrained animals, since the animal only needs to make one type of response. On the other hand, since reward strongly modulates neural activity, and GNG paradigms can be challenging as the stimulus, response, and reward are tightly linked\cite{REFREF}. Multi-port tasks, like two-choice paradigms, overcome many of these drawbacks, as the animal is trained to respond in one way to condition A and some other way to condition B. In this way, the stimulus, response, and reward can be disentangled, but at the cost of a more complicated task structure that can make interpretations difficult in still other ways. However, they can be more difficult to adapt for head-restrained conditions. Animals normally use head movements or their whole body to reach one reward port or the other\cite{REFREF}, which is not possible in physiology experiments that require the animal's head to be fixed in place in the recording apparatus. 
 
 
 % \texttt{This is a line of code.}
@@ -98,10 +119,3 @@ Rats were presented with a morph image on a small fraction of trials (<15\%, see
 % \end{FPfigure}
 % \afterpage{\clearpage}
 
-
-\section{Discussion?}
-
-
-In Go/No-Go (GNG) paradigms, the animal responds to a given stimulus (the "Go" condition) by licking a choice port or pressing a lever, and must withhold a response otherwise (the "No-Go" condition). GNG paradigms have fewer moving parts, requiring only one response type, which can make it easier to learn. However, subjects tend to make more Go responses in the GNG task, as the Go response is rewarded while other other behaviors are not\cite{REFREF}. 
-
-For physiology experiments, GNG paradigms are more amenable to head-restrained animals, since the animal only needs to make one type of response. On the other hand, since reward strongly modulates neural activity, and GNG paradigms can be challenging as the stimulus, response, and reward are tightly linked\cite{REFREF}. Multi-port tasks, like two-choice paradigms, overcome many of these drawbacks, as the animal is trained to respond in one way to condition A and some other way to condition B. In this way, the stimulus, response, and reward can be disentangled, but at the cost of a more complicated task structure that can make interpretations difficult in still other ways. However, they can be more difficult to adapt for head-restrained conditions. Animals normally use head movements or their whole body to reach one reward port or the other\cite{REFREF}, which is not possible in physiology experiments that require the animal's head to be fixed in place in the recording apparatus. 
