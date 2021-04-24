@@ -11,9 +11,9 @@ Electrophysiology provides the most direct access to neural activity, as it meas
 
 In contrast, optical approaches allow the same cells to be tracked for long periods of time, and simultaneous recording of large populations (hundreds to thousands) in the same animal. Optical imaging of neural activity relies on genetic tools that enable fluorescent indicators to be expressed in targeted cell populations. Standard approaches rely on tracking changes in calcium activity that occur in response to voltage changes in a neuron\cite{REFREF}. As such, the measured signal is slower and not a direct readout of neural activity, as measured by electrophysiology. Instead, calcium activity is measured by way of genetically-encoded fluorescent calcium indicators (GECIs)\cite{Akerboom2012, Chen2013}, which fluoresce in response to calcium binding. In transgenic animals, these indicators can be expressed in a controlled manner, from sparse labeling\cite{REFREF} to pan-neuronal expression\cite{REFREF}. In the absence of a transgenic animal or in combination with one that expresses a different gene of interest, one can also use viral vectors, such as an adeno-associated virus (AAV) or lentivirus\cite{REFREF} for robust delivery of the GCaMP construct, and expression of the indicator remains robust and stable over at least several months\cite{REFREF}.
 
-Physical access to deep or lateral parts of the brain is limited with optical methods, which typically rely on imaging the brain from directly above the animal's head. Many optical systems are bulky, making it quite difficult to record from freely moving animals. While electrodes can be inserted deep and at any angle into the brain, optical access to deeper brain structures sometimes requires removing superficial layers\cite{REFREF}, or using mirrors to direct the light path in clever ways while keeping the collection system above the animal\cite{Andermann2013}. Head-mounted optical systems allow for cellular resolution imaging in freely moving animals \cite{REFREF miniscope, Helmchen2001, Sawinski2009}, and high-photon-count imaging (\textit{e.g.}, >3 photon \cite{REFREF}) improve optical access to deeper brain structure
+Physical access to deep or lateral parts of the brain is limited with optical methods, which typically rely on imaging the brain from directly above the animal's head. Many optical systems are bulky, making it quite difficult to record from freely moving animals. While electrodes can be inserted deep and at any angle into the brain, optical access to deeper brain structures sometimes requires removing superficial layers\cite{REFREF}, or using mirrors to direct the light path in clever ways while keeping the collection system above the animal\cite{Andermann2013}. Head-mounted optical systems allow for cellular resolution imaging in freely moving animals\cite{miniscope, Helmchen2001, Sawinski2009, 3photonmini}, and high-photon-count imaging (\textit{e.g.}, >3 photon\cite{REFREF}) improve optical access to deeper brain structure
 
-However, the gap between the two methods continues to get smaller, as technological advancements offer improvements to the challenges each face. There continue to be major technical advances in electrophysiological approaches, such as high-density electrode arrays \cite{REFREF} and computational methods for processing high channel count data and verifying chronic access to specific cells \cite{REFREF}. For imaging, 
+However, the gap between the two methods continues to get smaller, as technological advancements offer improvements to the challenges each face. There continue to be major technical advances in electrophysiological approaches, such as high-density electrode arrays\cite{REFREF} and computational methods for processing high channel count data and verifying chronic access to specific cells\cite{REFREF}. For imaging, 
 
 Each generation of calcium indicators has proved increasingly more powerful, \textit{e.g.}, higher signal-to-noise (SNR), multi-color alternatives, and higher temporal resolution \cite{Akerboom2012OptimizationImaging, Chen2013UltrasensitiveActivity, REFREF}. Several groups \cite{REFREF, Adam Cohen, etc} have been developing voltage-sensitive indicators, which have the potential to combine the advantages of spatial and genetic access provided by optical methods with the more direct signal and higher temporal resolution of electrophysiology. High-photon-count imaging (\textit{e.g.}, >3 photon \cite{REFREF}) improve optical access to deeper brain structure
 
@@ -27,7 +27,7 @@ Miniature head-mounted two-photon microscopes offer an alternative to head-fixat
 
 % FIGURE 2.1 Rat visual areas
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/rat_visual_areas.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-1_rat_visual_areas/rat_visual_areas.pdf}
     \vspace{.1in}
     \caption[Visual areas in the rat]{Visual areas in the rat. \textbf{A.} Lateral view of visually responsive areas identified by electrophysiological mapping of retinotopic preference. \textbf{B.} Flattened representation of lateral visual areas, with targets of the present study highlighted in REFREF. 
     \label{fig:rat_visual_areas}}
@@ -42,23 +42,27 @@ Almost all of our knowledge about rat visual cortex comes from electrophysiology
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Surgery + implant
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% fig: experimental_pipeline
+% fig:experimental_pipeline
 % fig:surgery_steps
-% fig: headplate_schematic
+% fig:headplate_schematic
+% fig:retino_mapping
+% fig:2p_schematic
+%fig:multiday_imaging
+
 Optical imaging approaches allow the same field-of-view (FOV), and with multiphoton imaging, the same cells, to be imaged across multiple sessions. Our approach aimed to combine head-fixation in awake rats, optical access to multiple brain areas, and precise re-positioning for long-term studies of chronically implanted animals. Several major challenges that needed to be addressed were:  1) accessibility of large FOVs over the extreme, lateral edge of the rat skull, 2) implant stability against the significant mechanical forces that awake rats are able to apply, and 3) motion artefacts due to large displacements in moving rats. 
 
 % Figure: Experimental pipeline
 For many behaviors of interest, sedatives or other anesthetics are not an option. This is particular true for experimental paradigms that rely on training animals on a task while they are head-restrained --- not only is it difficult to acquire quality cellular resolution recordings in struggling animals, but moreover, stress has been shown to negatively impact learning rates, as well\cite{REFREF}. 
 
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/chapter_2/experimental_pipeline.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-2_experiment_pipeline/experiment_pipeline.pdf}
     \vspace{.1in}
-    \caption[Experimental pipeline]{Headplate design and assembly. \textbf{a.} Exposed cortical surface and craniotomy during a microinjection of AAV-GCaMP. Blue, dye used to visualize spread (see Methods) \textbf{b.} Bright-field view of a cranial window REFREF. \textbf{c.} Fluorescent view of GCaMP expression in the cranial window shown in \textbf{c} REFREF TODO.
-    \label{fig:experimental_pipeline}}
+    \caption[Experiment pipeline]{Experiment pipeline. \textbf{a.} Exposed cortical surface and craniotomy during a microinjection of AAV-GCaMP. Blue, dye used to visualize spread (see Methods) \textbf{b.} Bright-field view of a cranial window REFREF. \textbf{c.} Fluorescent view of GCaMP expression in the cranial window shown in \textbf{c} REFREF TODO.
+    \label{fig:experiment_pipeline}}
 \end{figure}
 
 % Habituation + shaping
-We developed an extensive pipeline of surgical and experimental procedures for large-scale visual characterizations in awake, head-fixed rats (Figure\ref{fig:experimental_pipeline}). Rats are much larger than mice, so a key challenge was to prevent awake rats from ripping themselves out of their implants and keeping the FOV stable enough for cellular resolution imaging. 
+We developed an extensive pipeline of surgical and experimental procedures for large-scale visual characterizations in awake, head-fixed rats (Figure\ref{fig:experiment_pipeline}). Rats are much larger than mice, so a key challenge was to prevent awake rats from ripping themselves out of their implants and keeping the FOV stable enough for cellular resolution imaging. 
 
 
 % window surgery --------------------------------------
@@ -67,7 +71,7 @@ We first adapted a surgical protocol for chronic cranial windows in mice \cite{G
 
 % Figure: Cranial window + implant
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/chapter_2/surgery_steps/surgery_steps.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-3_surgery_steps/surgery_steps.pdf}
     \vspace{.1in}
     \caption[Chronic cranial window]{Implant of chronic cranial windows for GCaMP imaging. \textbf{a.} Exposed cortical surface and craniotomy during a microinjection of AAV-GCaMP. Blue, dye used to visualize spread (see Methods) \textbf{b.} Bright-field view of a cranial window REFREF. \textbf{c.} Fluorescent view of GCaMP expression in the cranial window shown in \textbf{c} REFREF TODO.
     \label{fig:surgery_steps}}
@@ -80,7 +84,7 @@ In order to access lateral visual areas while keeping the rat’s head and body 
 
 % Figure: Headplate and holding the rat
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/chapter_2/headplate_schematic/headplate_schematic.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-4_headplate_schematic/headplate_schematic.pdf}
     \vspace{.1in}
     \caption[Headplate design and assembly]{Headplate design and assembly. \textbf{a.} Exposed cortical surface and craniotomy during a microinjection of AAV-GCaMP. Blue, dye used to visualize spread (see Methods) \textbf{b.} Bright-field view of a cranial window REFREF. \textbf{c.} Fluorescent view of GCaMP expression in the cranial window shown in \textbf{c} REFREF TODO.
     \label{fig:headplate_schematic}}
@@ -103,7 +107,7 @@ We developed a tilting tandem-lens epifluorescence macroscope\cite{Ratzlaff1991}
 
 % Figure:  retino_mapping (WF)
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/chapter_2/retino_mapping/retino_mapping.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-5_retino_mapping/retino_mapping.pdf}
     \vspace{.1in}
     \caption[Retinotopic mapping]{Identifying visual area boundaries. \textbf{a.} REFREF.
     \label{fig:retino_mapping}}
@@ -114,9 +118,9 @@ For fast acquisition of retinotopic maps, we used Fourier-based calcium imaging\
 
 Visual stimuli were presented using custom Python scripts (see Methods) on a large LCD monitor, which was centered in front of the left eye to span the animal's visual field left visual field (~177$^{\circ}$ of visual angle along azimuth, 67$^{\circ}$ along elevation). The mapping protocol consisted of a periodic, moving bar stimulus\cite{Kalatsky2003, Marshel2011} presented to the (left) eye contralateral to the cranial window. The bar was either a white bar drifting over a black background or an apertured bar containing a random subset of natural scene images drifting over a gray background. We did not find an clear difference between the two bar types, but qualitatively, the latter seemed quite reliable, so we primarily used the natural scene bars for the mapping sessions. The bar was presented at 0.13 Hz along the azimuth and elevation axes, for a total of 2 (downward, rightward) or 4 (downward, rightward, leftward, upward) conditions. A total of 4-5 repetitions of 10 cycles each were acquired for each direction. 
 
-Though we tried both intrinsic imaging and calcium imaging, we found that calcium imaging in lightly anesthetized animals was the most reliable for quickly identifying the boundaries of each visual area within a given cranial window. This precluded the need for motion correction and multiple repeated session due to animal movement, as mapping was typically done prior to habituation (see Chapter REFREF, Figure\ref{fig:experimental_pipeline}). Specifically, we found that with light levels of anesthesia (minimal isofluorane, 0.5-1\%, and a small dose of choloprothixene, $2mg/kg$ REFREF), such that animals woke up alert immediately after the isofluorane nose cone was removed, we were able to acquire strong neural signal without needing motion correction for processing the maps.
+Though we tried both intrinsic imaging and calcium imaging, we found that calcium imaging in lightly anesthetized animals was the most reliable for quickly identifying the boundaries of each visual area within a given cranial window. This precluded the need for motion correction and multiple repeated session due to animal movement, as mapping was typically done prior to habituation (see Chapter REFREF, Figure\ref{fig:experiment_pipeline}). Specifically, we found that with light levels of anesthesia (minimal isofluorane, 0.5-1\%, and a small dose of choloprothixene, $2mg/kg$ REFREF), such that animals woke up alert immediately after the isofluorane nose cone was removed, we were able to acquire strong neural signal without needing motion correction for processing the maps.
 
-We observed smooth retinotopic maps in  V1, LM, and LI, as well as in surrounding areas, such as AL and RL across rats (Figure\ref{retino_mapping}). In some animals, the cranial window spanned all three areas, but in most cases, only one or two areas were accessible with sufficient GCaMP expression for population imaging at cellular resolution (V1: REFREF rats across REFREF imaging sites, LM: REFREF rats across # imaging sites, Li: REFREF rats across REFREF imaging sites, see Methods).
+We observed smooth retinotopic maps in  V1, LM, and LI, as well as in surrounding areas, such as AL and RL across rats (Figure\ref{fig:retino_mapping}). In some animals, the cranial window spanned all three areas, but in most cases, only one or two areas were accessible with sufficient GCaMP expression for population imaging at cellular resolution (V1: REFREF rats across REFREF imaging sites, LM: REFREF rats across REFREF imaging sites, Li: REFREF rats across REFREF imaging sites, see Methods).
 
 % Area segmentation
 To segment the visual areas, we used an established method that converts the phase map into a sign map based on the gradient of the image to determine the direction reversals, which are the area boundaries\cite{Garrett2014, Zhuang2017}. We excluded any animals that had ambiguous maps (see REFREF\ref{fig:REFREF} for examples of clear and ambiguous maps). Across animals, there was some variability in which visual areas were contained within the cranial window and the patchiness of expression due to inconsistent viral spread or injections. Patchy expression presented a challenge to a fully automated segmentation approach, for example, by splitting visual areas that should be continuous, or assigning an area where viral expression and signal was quite poor. All maps were thus inspected by eye, and patch merging and smoothing parameters were manually adjusted based on visual sign consistency, size and orientation of a given visual area relative to surrounding areas (since all windows captured minimally 1-2 mirror reflections), and comparison with movies of the imaging session, which allowed direct visualization of the stimulus traveling on the cortical surface. 
@@ -129,24 +133,26 @@ To segment the visual areas, we used an established method that converts the pha
 % fig:2p_schematic (beam path, 2p schematic, face-camera, schematic of whole thing?)
 % fig:scope_examples (Imaging modes:  compare 2x, 4x, also show dual channel).
 % fig:multiday_imaging
-For cellular resolution imaging, we created a custom, two-photon excitation microscope especially designed for recording from all visual areas in an awake behaving rat. A key feature of this microscope is its ability to pivot about the focal point of the microscope objective --- the microscope can be tilted to any orientation required to access lateral cortical areas while keeping the animal in a natural, unrotated position (Figure\ref{fig:2p_schematic}). Meanwhile, the body of the microscope was constructed so as to allow ample space for the animal's body while maintaining over 180º of unobstructed viewing angle for a head-fixed animal.
 
 % Figure:  2p schematic
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/2p_schematic/2p_schematic.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-6_2p_schematic/2p_schematic.pdf}
     \vspace{.1in}
     \caption[Tilting two-photon microscope]{Tiltable 2-photon microscope. \textbf{a.} REFREF.
     \label{fig:2p_schematic}}
 \end{figure}
 
+For cellular resolution imaging, we created a custom, two-photon excitation microscope especially designed for recording from all visual areas in an awake behaving rat. A key feature of this microscope is its ability to pivot about the focal point of the microscope objective --- the microscope can be tilted to any orientation required to access lateral cortical areas while keeping the animal in a natural, unrotated position (Figure\ref{fig:2p_schematic}). Meanwhile, the body of the microscope was constructed so as to allow ample space for the animal's body while maintaining over 180º of unobstructed viewing angle for a head-fixed animal.
+
+
 The microscope was built on a tilting platform that allows any region of visual cortex to be targeted, including far lateral regions. We also attached an epifluorescence imaging path for intermediate-sized FOVs (Figure\ref{fig:2p_schematic}\textbf{X}). The bright-field and epifluorescence channels are convenient for quickly identifying areas to target prior to switching into two-photon mode. On a more practical level, we were able to use the epifluorescence mode for retinotopic mapping of intermediate fields of view, in case validation with two-photon was ambiguous (REFREF?). 
 
 % Figure:  2p, scope_examples REFREF, 
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/scope_examples/scope_examples.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-7_scope_examples/scope_examples.pdf}
     \vspace{.1in}
     \caption[Two modes for two-photon imaging]{Modes for two-photon imaging. \textbf{A.} Dual-channel, simultaneous acquisition. \textbf{B.} Standard FOV, $500um$ x $500um$. \textbf{C.} Standard, large FOV, $1mm$ x $1mm$. \textbf{D} Extra-large FOV for imaging two visual areas across their border.
-    \label{fig:multiday_imaging}}
+    \label{fig:scope_examples}}
 \end{figure}
 
 We created two imaging modes for the two-photon microscope (Figure\ref{fig:scope_examples}). The first is a more standard imaging field (up to $0.5mm$x$1mm$), with high cellular resolution (~$1um$x$1um$x$2um$ estimated point spread function, measured with a 16x/0.8NA Nikon objective). The second mode is a much larger FOV (up to $1mm$x$2mm^2$) with slightly lower, albeit still single-cell resolution (~$2um$x$2um$x$12um$ estimated point spread function). This second mode provides access to the majority of a given visual area in the rat brain, and in some cases, multiple areas simultaneously. 
@@ -160,15 +166,16 @@ Finally, since we were recording neural activity in awake animals, it was critic
 
 % Reaching our dreams 1.
 % Figure:  Multi-day imaging (2 example rats)
-The kinematic mount for our titanium headplate was not only designed to hold the animal stable, but importantly, to allow precise re-positioning of animals from day to day. In combination with blood vessel landmarks and the unique layout of fluorescent, GCaMP-expressing cell bodies in a given field-of-view in 3-dimensional space, this precise re-fixation allowed us to rapidly relocate the same cells across sessions (Figure\ref{fig:multiday_imaging}). It is difficult in any GCaMP-labeled brain to get the same exact population on each day, due to differences in baseline activity and generic neural tissue movement that occurs across hours. However, the majority of well-labeled cells combined with scanning in depth enabled good matching across sessions, as quantified by REFREF. 
 
 % Figure:  2p, multiday_imaging
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/multiday_imaging/multiday_imaging.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-8_multiday_imaging/multiday_imaging.pdf}
     \vspace{.1in}
     \caption[Multi-day imaging]{Imaging the same site across days. \textbf{a.} REFREF.
     \label{fig:multiday_imaging}}
 \end{figure}
+
+The kinematic mount for our titanium headplate was not only designed to hold the animal stable, but importantly, to allow precise re-positioning of animals from day to day. In combination with blood vessel landmarks and the unique layout of fluorescent, GCaMP-expressing cell bodies in a given field-of-view in 3-dimensional space, this precise re-fixation allowed us to rapidly relocate the same cells across sessions (Figure\ref{fig:multiday_imaging}). It is difficult in any GCaMP-labeled brain to get the same exact population on each day, due to differences in baseline activity and generic neural tissue movement that occurs across hours. However, the majority of well-labeled cells combined with scanning in depth enabled good matching across sessions, as quantified by REFREF. 
 
 % Figure: 2-area imaging
 % REFREF TODO?
