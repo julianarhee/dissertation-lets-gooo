@@ -136,20 +136,20 @@ To segment the visual areas, we used an established method that converts the pha
 \begin{figure}[t!]
     \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-6_2p_schematic/2p_schematic.pdf}
     \vspace{.1in}
-    \caption[Tilting two-photon microscope]{Tiltable 2-photon microscope. \textbf{A.} Schematic of optical paths to the tilting imaging plane. \testbf{B.} Schematic of the microscope housing and optical path along the rotational axis of the microscope. Optical components are included for references. \textbf{C.} An epifluorescence microscope attached to the two-photon microscope with dual-channel imaging for FOV identification one magnification step lower than the lowest two-photon zoom. \textbf{D.} A photograph of the actual microscope. \textbf{E.} A high-resolution camera system focused on one side of the animal for simultaneous imaging of face and body movements. REFREF
+    \caption[Tilting two-photon microscope]{Tiltable 2-photon microscope. \textbf{A.} Schematic of optical paths to the tilting imaging plane. \testbf{B.} Schematic of the microscope housing and optical path along the rotational axis of the microscope. Optical components are included for references. \textbf{C.} An epifluorescence microscope attached to the two-photon microscope with dual-channel imaging for FOV identification one magnification step lower than the lowest two-photon zoom. \textbf{D.} A photograph of the actual microscope. \textbf{E.} A high-resolution camera system focused on one side of the animal for simultaneous imaging of face and body movements REFREF.
     \label{fig:2p_schematic}}
 \end{figure}
 
 For cellular resolution imaging, we created a custom, two-photon excitation microscope especially designed for recording from all visual areas in an awake behaving rat. A key feature of this microscope is its ability to pivot about the focal point of the microscope objective --- the microscope can be tilted to any orientation required to access lateral cortical areas while keeping the animal in a natural, unrotated position (Figure\ref{fig:2p_schematic}). Meanwhile, the body of the microscope was constructed so as to allow ample space for the animal's body while maintaining over 180º of unobstructed viewing angle for a head-fixed animal.
 
 
-The microscope was built on a tilting platform that allows any region of visual cortex to be targeted, including far lateral regions. We also attached an epifluorescence imaging path for intermediate-sized FOVs (Figure\ref{fig:2p_schematic}\textbf{X}). The bright-field and epifluorescence channels are convenient for quickly identifying areas to target prior to switching into two-photon mode. On a more practical level, we were able to use the epifluorescence mode for retinotopic mapping of intermediate fields of view, in case validation with two-photon was ambiguous (REFREF?). 
+The microscope was built on a tilting platform that allows any region of visual cortex to be targeted, including far lateral regions. We also attached an epifluorescence imaging path for intermediate-sized FOVs (Figure\ref{fig:2p_schematic}\textbf{C}). The bright-field and epifluorescence channels are convenient for quickly identifying areas to target prior to switching into two-photon mode. On a more practical level, we were able to use the epifluorescence mode for retinotopic mapping of intermediate fields of view, in case validation with two-photon was ambiguous (REFREF?). 
 
 % Figure:  2p, scope_examples REFREF, 
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-7_scope_examples/scope_examples.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-7_scope_examples/fig_2-7_scope_examples.pdf}
     \vspace{.1in}
-    \caption[Two modes for two-photon imaging]{Modes for two-photon imaging. \textbf{A.} Dual-channel, simultaneous acquisition. \textbf{B.} Standard FOV, $500um$ x $500um$. \textbf{C.} Standard, large FOV, $1mm$ x $1mm$. \textbf{D} Extra-large FOV for imaging two visual areas across their border.
+    \caption[Two-photon imaging modes]{Modes of two-photon imaging. \textbf{A.} Standard FOV, $500um$ x $500um$. \textbf{B.} Standard, large FOV, $1mm$ x $1mm$. \textbf{C.} Dual-channel acqusition for red and green channels. Red, psuedo-colored SR101 blood vessel image. Green, pseudo-colored GCaMP image below the surface. \textbf{D} Extra-large FOV, $1mm$ x $1mm$, can be used for imaging two visual areas simultaneously across their border. Colormap, psuedo-colored smoothed retinotopic preferences calculated across the FOV showing the mirror reflection that demarcates the two visual areas. 
     \label{fig:scope_examples}}
 \end{figure}
 
@@ -160,16 +160,16 @@ As a proof-of-principle, we tested how well two visual areas could be identified
 In all zoom modes, the microscope also supports simultaneous two-channel imaging (red and green, see Figure\ref{fig:scope_examples}), allowing for either two functional channels (\textit{e.g.}, nuclear-localized red GECIs with green GECIs outside the nucleus), or, one anatomical channel (blood vessels filled with SR101, a fluorescent dye) for registering volumes and motion correction with the other, functional GCaMP channel. 
 
 % Pupil/face-tracking REFREF TODO.
-Finally, since we were recording neural activity in awake animals, it was critical to monitor their behavior and other facial movements. Arousal states and locomotion modulate neural activity in ways that are unrelated to the task at hand or stimulus being shown to the animal. Moreover, particularly for vision experiments, the characterization of visual cortex also depends on knowing and controlling where stimuli fall on the retina. To track eye movements and all other visible behaviors, we simultaneously recorded high-resolution images using an IR-illuminated camera system (Allied Vision, MantaXX REFREF) mounted on one side of the animal. Behavior acquisition was synced frame-by-frame to two-photon imaging acquisition to track and align behavioral features, e.g., pupil dynamics, oral movements, etc., to all imaging data (Figure\ref{fig:2p_schematic}, TODO REFREF).
+Finally, since we were recording neural activity in awake animals, it was critical to monitor their behavior and other facial movements. Arousal states and locomotion modulate neural activity in ways that are unrelated to the task at hand or stimulus being shown to the animal. Moreover, particularly for vision experiments, the characterization of visual cortex also depends on knowing and controlling where stimuli fall on the retina. To track eye movements and all other visible behaviors, we simultaneously recorded high-resolution images using an IR-illuminated camera system mounted on one side of the animal. Behavior acquisition was synced frame-by-frame to two-photon imaging acquisition to track and align behavioral features, e.g., pupil dynamics, oral movements, etc., to all imaging data (Figure\ref{fig:2p_schematic}, TODO REFREF).
 
 % Reaching our dreams 1.
 % Figure:  Multi-day imaging (2 example rats)
 
 % Figure:  2p, multiday_imaging
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-8_multiday_imaging/multiday_imaging.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_2/fig_2-8_multiday_imaging/fig_2-8_multiday_imaging.pdf}
     \vspace{.1in}
-    \caption[Multi-day imaging]{Imaging the same site across days. \textbf{a.} REFREF.
+    \caption[Multi-day imaging]{Imaging the same cells across days. Each row shows one FOV accessed in three separate days. Each site was identified by eye. Images show the motion-corrected average for each site. No corrections to register one session with the next.    
     \label{fig:multiday_imaging}}
 \end{figure}
 
