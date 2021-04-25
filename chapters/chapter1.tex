@@ -35,7 +35,7 @@ Modularity is important because a given behavior can be tested under different r
 
 % FIGURE 1.1 OpenRatBox Schematic
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-1_openratbox/openratbox.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-1_openratbox/fig_1-1_openratbox.pdf}
     \vspace{.1in}
     \caption[OpenRatBox]{OpenRatBox: Open-source, automated, high-throughput training. \textbf{A.} Top, Schematic of one training box. Numbers denote relevant parts. Bottom inset, Logic of experimental control: an independent server on each box (here, showing 4 boxes per tower, with a total of 5 towers used for the present study) runs a specified experiment, and a main control computer with a client allows full control of each box. Left, A full tower assembly of four identical training boxes. \textbf{B.} A view of a room of towers used to train the animals in the present work. \textbf{C.} Plug-and-play components can be swapped out for different task paradigms. \textbf{D.} Boxes equipped with a commutator can house tethered animals for chronic neural stimulation or recording experiments.  
     \label{fig:openratbox}}
@@ -56,9 +56,9 @@ We trained rats to perform a simple, two-category object discrimination task\cit
 
 % FIGURE 1.1 Basic training
 \begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-2_basic_training/basic_training.pdf}
+    \includegraphics[width=\textwidth]{figures/chapter_1/fig_1-2_basic_training/fig_1-2_basic_training.pdf}
     \vspace{.1in}
-    \caption[High-throughput training]{High-throughput training on a simple two-alternative choice task. \textbf{A.} Logic of the basic, two-category object discrimination task. \textbf{B.} Trial structure. \textbf{C.} Example training data from one rat. Black, overall accuracy as a function of training session number. Gray, Number of trials completed in each session. \textbf{D.} Accuracy for each of the two objects for the example rat shown in \textbf{C}. \textbf{E.} Overall accuracy for a large cohort of animals (N=REFREF rats) as a function of training session. \textbf{F.} Top, Accuracy for each box and each tower. Each group, indicated by brackets, represents one tower of 4 boxes (4 towers shown), with the leftmost group of points corresponding to the highest box, and the rightmost points. Bottom, Number of trials performed per session for each box and tower. Notation as in the upper panel.
+    \caption[High-throughput training]{High-throughput training on a simple two-alternative choice task. \textbf{A.} Logic of the basic, two-category object discrimination task. \textbf{B.} Trial structure. \textbf{C.} Example training data from one rat. Black, overall accuracy as a function of training session number. Gray, Number of trials completed in each session. \textbf{D.} Accuracy for each of the two objects for the example rat shown in \textbf{C}. \textbf{E.} Overall accuracy for a large cohort of animals (N=33 rats) as a function of training session. \textbf{F.} Top, Accuracy for each box and each tower. Each group, indicated by brackets, represents one tower of 4 boxes (4 towers shown), with the leftmost group of points corresponding to the highest box, and the rightmost points. Bottom, Number of trials performed per session for each box and tower. Notation as in the upper panel. \textbf{G.} Performance split by stimulus-port mapping and object identity. Red, accuracy for object A. Blue, accuracy for object B. Portmap 1 and 2 denote whether the animal is assigned to lick port 1 for object A or port 2 for object A, and vice versa.
     \label{fig:basic_training}}
 \end{figure}
 
@@ -66,18 +66,24 @@ Animals could be trained to perform shape discriminations for reasonably dissimi
 
 % ---------------------------------------------------------
 % Behavior Generalization
-\section{Tests of visual object discrimination and recognition}
+\section{Visual object recognition behavior}
 Previous studies have demonstrated that rats are capable of recognizing never-before-seen views of objects familiar objects\cite{Zoccolan2009, Vermaercke2012, Tafazoli2012Transformation-TolerantPriming, REFREF}. Our goal was to validate that rats will perform these behaviors in our high-throughput system. Using OpenRatBox, we tested how rats generalize across two types of transformations: the first was a psychophysical test, by which we identified rats’ discrimination thresholds separating one object from another, and the second was an invariant recognition test, where rats had to discriminate objects across changes in particular views (Figure\ref{fig:behavior_generalization}). 
 
 Once rats reliably discriminated between the two objects, we then tested on their ability to generalize across two types of transformations. To identify perceptual discrimination thresholds separating the two objects, we tested identity-changing transformations in which images were parametrically varied between the two original objects at a given view.
 
 % FIGURE 1.3 Behavior generalization.
-\begin{figure}
-\includegraphics[width=\textwidth]{figures/fig_1-3_behavior_generalization/behavior_generalization.pdf}
+\begin{figure}[t!]
+\includegraphics[width=\textwidth]{figures/chapter_1/fig_1-3_behavior_generalization/fig_1-3_behavior_generalization.pdf}
     \vspace{.1in}
-    \caption[Generalization of visual behavior]{Generalization to identity-preserving and identity-changing transformations. \textbf{A.} Training and testing design. \textbf{B.} Morph stimuli create an axis along which identity changes. \textbf{C.} Example rat, with psychometric curve. \textbf{D.} Pyschometric curves for one cohort (N=10 rats).\textbf{E.} Metrics of category boundaries based on perceptual choices.  
+    \caption[Generalization of visual behavior]{Generalization to identity-preserving and identity-changing transformations. \textbf{A.} Training and testing pipeline. Animals are first trained on the basic discrimination task. Those that pass criterion performance are then tested on identity-changing or identity-preserving generalizations on probe trials that are interleaved with the basic task. \textbf{B.} Morph stimuli create an axis along which identity changes across a stimulus continuum between the original anchors, object A and B. \textbf{C.} Example data on the morph probe trials for one rat. Dots, average across trials for each morph level. Line, fit psychometric curve. \textbf{D.} Pyschometric curves for one cohort (N=10 rats). Thin lines, individual rats. Thick line, average psychometric curve across rats. \textbf{E.} Identity-preserving transformations tested for each of the original objects: 6 sizes and 9 in-depth rotations. Green, subset of conditions used for training. Blue, test transformations for which feedback was never provided. Orange, size-matched (\textit{i.e.}, acuity-matched) transformations of the test views, but for which feedback was provided, to compare the effect of feedback on generalization performance. No-feedback quadrants were counterbalanced across animals. \textbf{F.} Example rat. \textbf{G.} Accuracy for rats in one cohort (n=10 rats) for train views, test views, and size-matched feedback views. Colors as in \textbf{E}. Each circle denotes session accuracies for a given rat, all rats shown. Error bars, SD. \textbf{H.} Accuracy as a function of the N-th presentation of a given transformation for feedback-provided (REFREF color) and no-feedback (REFREF color) conditions. Shading, SD across animals. \textbf{I.} Accuracy for each depth-rotation tested. Each dot is the session accuracy for a given rat. Lines, mean and SD across sessions. \textbf{J.} Same as \textbf{I}, but for each stimulus size tested. 
     \label{fig:behavior_generalization}}
 \end{figure}
+
+
+%     \caption*{\textbf{Figure 2.1} Example figure and tips -- A) Your figure numbers should follow the format of Figure chapter#.figure#. B) Set width equal to textwidth. C) Specify position as [t!] to insert at page top.}
+% \end{figure}
+
+
 
 Specifically, we created a shape continuum by generating a series of morphs that varied along a high-dimensional identity axis separating the two original objects (as shown in Figure\ref{fig:morphs}). The identity axis was defined in N-dimensional pixel space, and morphs were selected to evenly sample distances along this axis (see Methods). We then tested the extent to which linear similarity in pixel space reflected perceived similarity in rats trained to discriminate the two anchor objects. 
 
@@ -88,7 +94,7 @@ To test how well animals discriminate objects across shape changes that preserve
 
 % ---------------------------------------------------------
 % Closing remarks
-\section{Discussion?}
+% \section{Discussion?}
 High-throughput behavior is important for practical reasons, but also scientific ones. 
 Standardization is important. 
 
