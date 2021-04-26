@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -127,3 +128,134 @@
 	<line class="st6" x1="378.9" y1="334.7" x2="378.9" y2="339.7"/>
 </g>
 </svg>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 576 432" style="enable-background:new 0 0 576 432;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st2{clip-path:url(#SVGID_4_);}
+	.st3{font-family:'ArialMT';}
+	.st4{font-size:6px;}
+	.st5{fill:none;stroke:#000000;stroke-width:0.25;}
+	.st6{fill:none;}
+</style>
+<g id="matplotlib.axis_5">
+</g>
+<g id="matplotlib.axis_7">
+</g>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="72" y="131.1" width="143.3" height="173.5"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);enable-background:new    ;">
+			
+				<image style="overflow:visible;" width="199" height="241" id="imageef18572638" xlink:href="A16DAF9C.png"  transform="matrix(0.72 0 0 -0.72 72 304.6477)">
+			</image>
+		</g>
+		<path class="st0" d="M95.1,161.3l6.2-0.8l-1.1-2.7l7.6,2.6l-6.6,4.5l0.3-2.9l-6.2,0.8L95.1,161.3"/>
+		<path class="st0" d="M124.4,161.7l6.3-1.3l-1.3-2.7l7.7,2.1l-6.3,4.9l0.1-2.9l-6.3,1.3L124.4,161.7"/>
+		<path class="st0" d="M153.8,162.1l6.3-1.7l-1.4-2.6l7.8,1.6l-6,5.3l0-2.9l-6.3,1.7L153.8,162.1"/>
+		<path class="st0" d="M183.1,162.6l6.5-2.2l-1.6-2.5l7.9,1.1l-5.6,5.7l-0.2-2.9l-6.5,2.2L183.1,162.6"/>
+		<path class="st0" d="M95.5,190.7l5.4-0.8l-1.1-2.7l7.6,2.5l-6.6,4.6l0.3-2.9l-5.4,0.8L95.5,190.7"/>
+		<path class="st0" d="M124.8,191.1l5.4-1.2l-1.3-2.6l7.7,2l-6.2,5l0.1-2.9l-5.4,1.2L124.8,191.1"/>
+		<path class="st0" d="M154.2,191.5l5.5-1.6l-1.5-2.5l7.9,1.5l-5.9,5.4l-0.1-2.9l-5.5,1.6L154.2,191.5"/>
+		<path class="st0" d="M183.5,192l5.7-2l-1.6-2.4l7.9,1l-5.5,5.8l-0.3-2.9l-5.7,2L183.5,192"/>
+		<path class="st0" d="M95.9,220.1l4.5-0.7l-1.1-2.7l7.6,2.4l-6.5,4.6l0.3-2.9l-4.5,0.7L95.9,220.1"/>
+		<path class="st0" d="M125.2,220.5l4.6-1.1l-1.3-2.6l7.8,1.9l-6.1,5.1l0-2.9l-4.6,1.1L125.2,220.5"/>
+		<path class="st0" d="M154.6,220.9l4.8-1.5l-1.5-2.5l7.9,1.3l-5.8,5.5l-0.2-2.9l-4.8,1.5L154.6,220.9"/>
+		<path class="st0" d="M183.9,221.4l4.9-1.9l-1.7-2.4l7.9,0.8l-5.4,5.9l-0.4-2.9l-4.9,1.9L183.9,221.4"/>
+		<path class="st0" d="M96.3,249.5l3.7-0.6l-1.2-2.7l7.6,2.3l-6.4,4.7l0.2-2.9l-3.7,0.6L96.3,249.5"/>
+		<path class="st0" d="M125.6,249.9l3.8-1l-1.4-2.6l7.8,1.7l-6.1,5.2l0-2.9l-3.8,1L125.6,249.9"/>
+		<path class="st0" d="M155,250.3l4-1.3l-1.6-2.5l7.9,1.1l-5.6,5.7l-0.2-2.9l-4,1.3L155,250.3"/>
+		<path class="st0" d="M184.3,250.8l4.1-1.7l-1.8-2.4l8,0.5l-5.2,6l-0.4-2.9l-4.1,1.7L184.3,250.8"/>
+		<path class="st0" d="M96.7,278.9l2.9-0.5l-1.2-2.7l7.7,2.2l-6.4,4.8l0.2-2.9l-2.9,0.5L96.7,278.9"/>
+		<path class="st0" d="M126.1,279.3l3-0.8l-1.4-2.6l7.8,1.6l-5.9,5.3l-0.1-2.9l-3,0.8L126.1,279.3"/>
+		<path class="st0" d="M155.4,279.7l3.2-1.2l-1.6-2.4l7.9,0.9l-5.5,5.8l-0.3-2.9l-3.2,1.2L155.4,279.7"/>
+		<path class="st0" d="M184.7,280.2l3.4-1.5l-1.8-2.3l8,0.3l-5,6.2l-0.5-2.9l-3.4,1.5L184.7,280.2"/>
+	</g>
+	<rect x="72" y="131.1" class="st1" width="143.3" height="173.5"/>
+</g>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="339.8" y="131.1" width="143.3" height="173.5"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_4_);enable-background:new    ;">
+			
+				<image style="overflow:visible;" width="199" height="241" id="image78a3a2bd1d" xlink:href="A16DAF9D.png"  transform="matrix(0.72 0 0 -0.72 339.84 304.6477)">
+			</image>
+		</g>
+		<path class="st2" d="M340.6,156.7v2.4l2.9-0.7l-3.6,7.1l-3.6-7.1l2.9,0.7v-2.4H340.6"/>
+		<path class="st2" d="M366.2,156.5l3.1,3.5l1.7-2.4l2.1,7.7l-7.4-3l2.6-1.4l-3.1-3.5L366.2,156.5"/>
+		<path class="st2" d="M395.5,156.8l2.9,3.1l1.6-2.5l2.4,7.6l-7.5-2.7l2.6-1.5l-2.9-3.1L395.5,156.8"/>
+		<path class="st2" d="M424.9,157.1l2.7,2.6l1.5-2.6l2.7,7.5l-7.6-2.4l2.5-1.6l-2.7-2.6L424.9,157.1"/>
+		<path class="st2" d="M454.3,157.3l2.6,2.3l1.4-2.6l3,7.4l-7.7-2.1l2.4-1.7l-2.6-2.3L454.3,157.3"/>
+		<path class="st2" d="M340.6,186.1v2.4l2.9-0.7l-3.6,7.1l-3.6-7.1l2.9,0.7v-2.4H340.6"/>
+		<path class="st2" d="M366.5,185.9l2.7,3.3l1.8-2.4l1.8,7.8l-7.3-3.3l2.7-1.3l-2.7-3.3L366.5,185.9"/>
+		<path class="st2" d="M395.8,186.2l2.5,2.9l1.7-2.4l2,7.7l-7.4-3l2.6-1.4l-2.5-2.9L395.8,186.2"/>
+		<path class="st2" d="M425.2,186.5l2.3,2.5l1.6-2.5l2.3,7.6l-7.5-2.7l2.6-1.5l-2.3-2.5L425.2,186.5"/>
+		<path class="st2" d="M454.6,186.7l2.1,2.1l1.5-2.6l2.7,7.5l-7.6-2.4l2.5-1.6l-2.1-2.1L454.6,186.7"/>
+		<path class="st2" d="M340.6,215.5v2.4l2.9-0.7l-3.6,7.1l-3.6-7.1l2.9,0.7v-2.4H340.6"/>
+		<path class="st2" d="M366.8,215.4l2.3,3.1l1.9-2.3l1.4,7.9l-7.1-3.6l2.7-1.1l-2.3-3.1L366.8,215.4"/>
+		<path class="st2" d="M396.2,215.6l2.2,2.7l1.8-2.3l1.7,7.8l-7.3-3.3l2.7-1.2l-2.2-2.7L396.2,215.6"/>
+		<path class="st2" d="M425.5,215.9l2,2.3l1.7-2.4l2,7.7l-7.4-3l2.6-1.3l-2-2.3L425.5,215.9"/>
+		<path class="st2" d="M454.9,216.2l1.8,1.9l1.6-2.5l2.3,7.6l-7.5-2.7l2.6-1.4l-1.8-1.9L454.9,216.2"/>
+		<path class="st2" d="M340.6,244.9v2.4l2.9-0.7l-3.6,7.1l-3.6-7.1l2.9,0.7v-2.4H340.6"/>
+		<path class="st2" d="M367.1,244.8l2,3l2-2.2l1,7.9l-7-3.9l2.8-1l-2-3L367.1,244.8"/>
+		<path class="st2" d="M396.5,245l1.8,2.5l1.9-2.3l1.3,7.9l-7.1-3.7l2.7-1.1l-1.8-2.5L396.5,245"/>
+		<path class="st2" d="M425.9,245.3l1.6,2.1l1.8-2.3l1.6,7.8l-7.2-3.4l2.7-1.2l-1.6-2.1L425.9,245.3"/>
+		<path class="st2" d="M455.2,245.6l1.4,1.7l1.7-2.4l1.9,7.7l-7.4-3.1l2.6-1.3l-1.4-1.7L455.2,245.6"/>
+		<path class="st2" d="M340.6,274.3v2.4l2.9-0.7l-3.6,7.1l-3.6-7.1l2.9,0.7v-2.4H340.6"/>
+		<path class="st2" d="M367.4,274.2l1.7,2.8l2.1-2.1l0.6,8l-6.8-4.3l2.8-0.9l-1.7-2.8L367.4,274.2"/>
+		<path class="st2" d="M396.8,274.5l1.5,2.3l2-2.2l0.9,7.9l-6.9-4l2.8-1l-1.5-2.3L396.8,274.5"/>
+		<path class="st2" d="M426.2,274.7l1.3,1.9l1.9-2.2l1.2,7.9l-7-3.8l2.7-1.1l-1.3-1.9L426.2,274.7"/>
+		<path class="st2" d="M455.5,275l1.1,1.4l1.8-2.3l1.5,7.8l-7.2-3.5l2.7-1.2l-1.1-1.4L455.5,275"/>
+	</g>
+	<rect x="339.8" y="131.1" class="st1" width="143.3" height="173.5"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 137.0308 364.9201)" class="st3 st4">azimuth</text>
+	<g>
+		
+			<image style="overflow:visible;enable-background:new    ;" width="7" height="138" id="image5880aa6772" xlink:href="A16DAF9B.png"  transform="matrix(0 0.72 0.72 0 97.0213 344.9481)">
+		</image>
+		<path class="st5" d="M96.8,344.8h0.4h99h0.4v5h-0.4h-99h-0.4V344.8z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 95.1368 356.3827)" class="st3 st4">0</text>
+			<text transform="matrix(1 0 0 1 115.0953 356.3823)" class="st3 st4">5</text>
+			<text transform="matrix(1 0 0 1 133.3849 356.3823)" class="st3 st4">10</text>
+			<text transform="matrix(1 0 0 1 153.3436 356.3824)" class="st3 st4">15</text>
+			<text transform="matrix(1 0 0 1 173.3017 356.3824)" class="st3 st4">20</text>
+			<text transform="matrix(1 0 0 1 193.2604 356.3827)" class="st3 st4">25</text>
+		</g>
+		<line class="st6" x1="96.8" y1="344.8" x2="96.8" y2="349.8"/>
+		<line class="st6" x1="196.6" y1="344.8" x2="196.6" y2="349.8"/>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 319.3607 354.8136)" class="st3 st4">altitude</text>
+	
+		<image style="overflow:visible;enable-background:new    ;" width="7" height="138" id="image5880aa6772_1_" xlink:href="A16DAFA4.png"  transform="matrix(0 0.72 0.72 0 279.3547 334.8416)">
+	</image>
+	<path class="st5" d="M279.1,334.7h0.4h99h0.4v5h-0.4h-99h-0.4V334.7z"/>
+	<text transform="matrix(1 0 0 1 274.8027 346.2755)" class="st3 st4">-20</text>
+	<text transform="matrix(1 0 0 1 294.761 346.2758)" class="st3 st4">-15</text>
+	<text transform="matrix(1 0 0 1 314.72 346.2758)" class="st3 st4">-10</text>
+	<text transform="matrix(1 0 0 1 336.3465 346.2759)" class="st3 st4">-5</text>
+	<text transform="matrix(1 0 0 1 357.304 346.2759)" class="st3 st4">0</text>
+	<text transform="matrix(1 0 0 1 377.2622 346.2755)" class="st3 st4">5</text>
+	<line class="st6" x1="279.1" y1="334.7" x2="279.1" y2="339.7"/>
+	<line class="st6" x1="378.9" y1="334.7" x2="378.9" y2="339.7"/>
+</g>
+</svg>
+>>>>>>> 2b7cf6aebc8831cdc85b5bc0013f07a5eac7013f
