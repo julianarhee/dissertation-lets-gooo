@@ -169,3 +169,26 @@ Quantification and statistical analysis
 (or, does this go with each specific analysis section?)
 
 Estimation
+
+
+
+% Receptive Fields.
+% Retinotopic responses of neuropil surrounding RGC axonal boutons Retinotopic tuning curve fitting was also implemented for the neuropil rings surrounding each bouton, to estimate the local retinotopic preference in the field of view. Each pixel in the field of view was attributed a preferred retinotopic location by first assigning the center of each neuropil ring with a value corresponding to the preferred retinotopic location of that neuropil ring, then dilating by a disk of 10 mm radius from each neuropil center respectively and averaging the preferred retinotopy across overlapping disks. The final pixel-wise estimates of retinotopic preference were obtained by spatial smoothing using an isotropic two-dimensional Gaussian filter with a standard deviation of 3 mm. The rate of change of retinotopy along the field of view (which was tangential to the surface of dLGN) was measured along the axis
+% for which the retinotopic map changed the fastest. To compute this spatial axis, we first calculated the two-dimensional pixel-wise gradient: VRetðx;yÞ = ðvRetðx;yÞ=vxÞbi + ðvRetðx;yÞ=vyÞbj. The spatial axis was defined as the normalized mean gradient vector across
+% pixels, VRet=kVRet k . The smoothed retinotopic mapwas then projected onto the normalized mean gradient vector (i.e., onto the unit vector along the direction of maximal change in retinotopic preference). For each pixel, we derived its projected location along this new spatial axis as: ~x = ðx; yÞ,VRet=kVRet k . The relationship between the preferred retinotopic location and ~x was modeled accord- ing to a linear function with offset: Retfitð~xÞ = a~x + b. The fitted parameter a (units: deg/mm) indicated the progression rate of the smoothed retinotopic map. We computed the normalized mean gradient axis and the scale factor, a, both for maps of azimuth and
+
+
+% Fine-scale retinotopic scatter Fine-scale retinotopic scatter (‘deg scatter’, Figure S1F) was estimated as the absolute retinotopic deviation, Sret (units: degrees of
+% ?
+% ?
+% visual space): Sret =
+% ?Retprefð~xBÞ? ða~xB + bÞ
+% ? . Here,Retprefð~xBÞ denoted the preferred retinotopic location of a given bouton, while
+% ða~xB +bÞ gave the predicted receptive field center based on the neuropil estimate, according to the projected location ~xB along the mean gradient axis. We also calculated the absolute deviation in spatial distance from the fitted spatial progression in the field, Sspa
+% ?
+% ?
+% (‘distance scatter’, Figure S1F; units: mm): Sspa =
+% ?~xB ?ðRetprefð~xBÞ? bÞ=a
+% ? . This value is equivalent to the distance that a bouton
+% would need to be moved along azimuth or elevation in order to obtain a perfectly smooth map.
+% Bouton
