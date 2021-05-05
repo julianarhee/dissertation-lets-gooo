@@ -9,10 +9,26 @@
 \usepackage{pdfpages}
 \usepackage{caption,subcaption}
 
+% include images
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf]{caption} % reduce default caption font size
+% Use Unicode characters when possible
+% \usepackage[utf8x]{inputenc}
+% array package and thick rules for tables
+\usepackage{array}
+% Remove comment for double spacing
+\usepackage{setspace} 
+%\linespread{2}
+% text symbol package
+\usepackage{textcomp}
+
+\usepackage{kotex}
+
 \begin{document}
 
 % AFTER YOU DEFEND YOU PUT YOUR CERTIFICATE HERE
 % \includepdf[page=1]{figures/fullpage.pdf}
+\includepdf[pages=1]{defense_certificate.pdf}
 
 % Harvard REQUIRES you to insert an empty page here
 \vspace*{0.2in}
@@ -23,10 +39,14 @@
 \input{frontmatter/personalize}
 \maketitle
 \copyrightpage
+\doublespacing
 \abstractpage
+\singlespacing
 \tableofcontents
 %\authorlist
 \listoffigures
+\listofterms
+\doublespacing
 \dedicationpage
 \acknowledgments
 

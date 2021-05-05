@@ -29,6 +29,7 @@
 	\abstractpage
 	\tableofcontents
 	\listoffigures % optional
+	\listofterms % optional
 	\dedicationpage
 	\acknowledgments
 }
@@ -68,9 +69,9 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Advisor: \@advisor} \rhead{\@author}
+	\lhead{Dissertation Advisor: \@advisor} \rhead{\@author}
 	\renewcommand{\headrulewidth}{0.0pt}
-	\vspace*{35pt}
+	\vspace*{25pt}
 	\begin{center}
 	\Large \textcolor{black}{\@title} \normalsize \\
 	\vspace*{20pt}
@@ -92,6 +93,15 @@
 	\chapter*{Acknowledgments}
 	\noindent
 	\input{frontmatter/thanks}
+	\vspace*{\fill} \newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
+\newcommand{\listofterms}{
+	\chapter*{Listing of abbreviations}
+	\noindent
+	\input{frontmatter/terms}
 	\vspace*{\fill} \newpage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
