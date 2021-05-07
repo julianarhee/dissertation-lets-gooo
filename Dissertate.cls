@@ -46,6 +46,10 @@
 
 \RequirePackage{graphicx}
 \RequirePackage{amssymb}
+\usepackage{textcomp} % text symbol package
+%\RequirePackage{gensymb} % math 
+\usepackage{siunitx}
+
 \RequirePackage{lettrine}
 \RequirePackage[super,comma,numbers]{natbib}
 \renewcommand{\bibnumfmt}[1]{[#1]}
@@ -73,6 +77,7 @@
 \RaggedRight
 
 \parindent 12pt
+\RequirePackage{amsmath} % math 
 \RequirePackage{mathspec}
 
 \setmathsfont(Digits,Latin,Greek)[Numbers={Proportional},SizeFeatures={{Size=-8, OpticalSize=8},{Size= 8-, OpticalSize=12}},]{EB Garamond}
