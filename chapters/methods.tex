@@ -33,7 +33,7 @@ Intracortical injections were made at multiple sites ($\sim$5-9 sites per crania
 About 20 minutes prior to the mapping session, animals were anesthetized with isofluorane (5\% induction, 1-1.5\% maintenance) and administered a subcutaneous dose of cholorprothixene (2 mg/kg, Sigma-Aldrich). During the mapping session, animals remained lightly anesthetized with minimal levels of isofluorane (0.5-1\%). Anesthesia levels were tested with the paw-pinch reflex and breathing rate. The left eye facing the monitor was checked between trials to ensure it remained open and stable. 
 
 \subsection{Tandem-lens macroscope}
-Widefield mapping was done with a tiltable, tandem-lens macroscope\cite{Ratzlaff1991, Kalatsky2003}, composed of a USB 3.0 CCD camera (MantaG033-B, Allied Vision) and 2 Nikon lenses (Nikon, 105-mm and 55-mm). Images were acquired at 25 Hz with 3x3 pixel binning (256x492 pixel ½-type sensor). Epifluorescence illumination was achieved with a 470nm LED (Thorlabs) that was filtered and reflected through a filter cube that housed an excitation filter, dichroic mirror, and emission filter (Thorlabs). Green fluorescence or reflected light was collected and passed through the filter cube then focused on a CCD detector. For epifluorescence illumination, we used a 470 nm LED filtered and reflected by a long-pass dichroic mirror, and emitted fluorescence was filtered and captured at an imaging rate of 25Hz using custom Python scripts.
+Widefield mapping was done with a tiltable, tandem-lens macroscope\cite{Ratzlaff1991, Kalatsky2003}, composed of a USB 3.0 CCD camera (MantaG033-B, Allied Vision) and 2 Nikon lenses (Nikon, 105-mm and 55-mm). Images were acquired at 25 Hz with 3x3 pixel binning (256x492 pixel ½-type sensor). Epifluorescence illumination was achieved with a 470 nm LED (Thorlabs) that was filtered and reflected through a filter cube that housed an excitation filter, dichroic mirror, and emission filter (Thorlabs). Green fluorescence or reflected light was collected and passed through the filter cube then focused on a CCD detector. For epifluorescence illumination, we used a 470 nm LED filtered and reflected by a long-pass dichroic mirror, and emitted fluorescence was filtered and captured at an imaging rate of 25Hz using custom Python scripts.
 
 % Compare w. Wekselblatt et al. 2016:  Camera lenses allow a relatively high numerical aperture (NA) for light collection, which can also be adjusted easily using the f-stop setting to restrict the NA. This permits a flexible trade-off between sensitivity and depth of field, especially as increased depth of field is useful, given the curvature of the cortical surface. Imaging was generally performed at an f-stop of 5.6. The ratio of the focal lengths of the two lenses determines image magnification. To map 1 cm of cortex across the 2-cm detector (6.5 μm pixels), we chose 50 mm and 105 mm lenses, yielding magnification of 2.1× and 3.1 μm specimen pixels. In practice, we find an effective spatial resolution of ∼25 μm, based on the highest spatial frequencies present in nonbinned images of vascular structure. Binning across spatially oversampled pixels can reduce shot noise by allowing more total photons to be detected with increased illumination or NA. This is a standard practice in intrinsic signal imaging (Kalatsky and Stryker 2003) and is generally applicable at high light levels, where readout noise is negligible compared with photon count noise.
 
@@ -55,6 +55,8 @@ While multi-site viral injections allowed for greater coverage of exposed cortex
 A battery of stimuli were used to characterize responses across rat lateral visual cortex. Briefly, a moving bar stimulus was used to map two-photon retinotopic preferences and register two-photon fields-of-view to wide-field maps identified with the same stimulus paradigm. To measure more fine-scaled receptive field properties, a standard tiling stimulus was used to estimate the position, extent, and shape of receptive fields. To estimate responses to simple features such as edge orientation or direction tuning, a set of drifting gratings were used. Finally, to characterize more complex object representation, as tested in the behavioral choices of trained rats, a subset of the same object stimuli were used to measure neuronal responses in naive rats. While localizer runs only used the moving bar and receptive field protocols, subsequent functional runs tested the full suite of stimuli.  
 
 \subsection{Visual stimulation}
+Head-fixed animals passively viewed visual stimuli presented on an LCD monitor (LG, 1920x1080 resolution, 60 Hz refresh rate), subtending \ang{120} of visual angle along azimuth and \ang{67} degrees along elevation axes of the visual field contralateral to the cranial window (see Figure\ref{fig:2p_retino}). Stimulus presentation was synced to neural data acquisition for each trial using custom software (MWorks, Python). 
+
 \subsubsection{Moving bar}
 A white bar subtending 2-5 degrees of visual angle cycled across a black screen at a stimulation frequency of 0.24Hz or 0.13Hz. Each of four cardinal directions were tested (downward, upward, leftward, rightward). Each trial consisted of of 12 cycles of the stimulus, and 4-6 trials were presented for each of the four conditions, totalling 16-24 trials total. Blank trials were also included to measure baseline fluctuations in spontaneous activity.  
 
@@ -68,37 +70,54 @@ To measure visual feature tuning, we presented drifting, square-wave gratings at
 \subsubsection{Objects}
 Visual objects were renderings of three-dimensional models built using a ray tracer package POV-Ray (http://www.povray.org/). Each object was defined as a particular configuration and blend of spheres. The particular objects selected for the anchors were modeled to replicate the stimuli used in a previous study\cite{Zoccolan2009}. Figure\ref{fig:basic_training} shows the ``default'' object views used during phase 1 of training. Objects were rendered with the same light source location and matched to have approximately equal height, width, and area, as defined by the a bounding box surround each object rendering. Object transformations (\textit{e.g.}, size, in-depth rotation) were generated using custom Python wrappers and the POV-Ray API). Morph stimuli were generated by gradually adjusting the relative proportions of each object, by parametrically shifting the spheres defining one object into the spheres defining the other. We used the Euclidean distance in pixel space to quantify the difference between each neighboring pair of images. 
 
-For two-photon imaging experiments, a subset of these morph stimuli were used: Each morph (7 intermediate morphs, plus 2 anchors) was presented at 5 different sizes (10-50 degrees, in 10 degree steps). For each size, mean luminance was measured with a photometer to determine the levels needed to create full-screen controls matched for each size and object. This resulted in 50 unique object conditions, each presented a minimum of 30 times across 6 blocks, with 5 repetitions of each of the 50 condition per block. Stimuli were presented for 1sec, followed by a 2sec inter-trial interval. 
+For two-photon imaging experiments, a subset of these morph stimuli were used: Each morph (7 intermediate morphs, plus 2 anchors) was presented at 5 different sizes (10-50 degrees, in 10 degree steps). For each size, mean luminance was measured with a photometer to determine the levels needed to create full-screen controls matched for each size and object. This resulted in 50 unique object conditions, each presented a minimum of 30 times across 6 blocks, with 5 repetitions of each of the 50 condition per block. Stimuli were presented for 1sec, followed by a 2 sec inter-trial interval. 
 
-\subsection{Image acquisition}
-Neural imaging data was collected using a custom-built galvo-resonant scanning two-photon microscope (20 kHz; Cambridge Technologies) and a 0.8 WD/16x objective lens (CF 175, Nikon Technologies). 920 nm excitation provided by a Mai Tai DeepSee laser (Spectra-Physics) was used for both channels. The microscope body was tilted at an angle of 40 degrees to match the plane of the cranial window. Single plane images were collected at a rate of 44.65 Hz (512x512 pixels; 1$mm$ x 1$mm$ FOV) using Scanimage (Vidrio Technologies). For each session, the FOV was placed 150-300 um below the coverslip or the surface blood vessels. 
 
-\subsubsection{Localizer sessions}
+\subsection{Neural Data Acquisition}
+% ScanImage vX.X (REFREF)
+% Volumetric rate for anatomicals REFREF
+Neural imaging data was collected using a custom-built galvo-resonant scanning two-photon microscope (20 kHz; Cambridge Technologies) and a 0.8 WD/16x objective lens (CF 175, Nikon Technologies). Light shielding around the objective was used to block light emitted from the LCD monitor. The microscope body was tilted at an angle of 40 degrees to match the plane of the cranial window. We used 920 nm excitation for both channels using a Ti:Sapphire laser (80 Mhz, MaiTai-eHP DeepSee, prechirped, Spectra-Physics). Laser power measured at the object was 50-80mW, likely an overestimate of actual power reaching the tissue through the cranial window. Single plane images were collected at a rate of 44.65 Hz (512x512 pixels; 1$mm$ x 1$mm$ FOV) using ScanImage (Matlab, Vidrio Technologies). 
+
+For anatomical volumes, a 200$um$ z-stack was taken in steps of 20$um$, at a volumetric rate of X Hz, simultaneously for both channels. A total of 100 volumes were taken and averaged for anatomical images. For localizer and functional runs (see below), the FOV was placed 150-300 um below the bottom layer of cranial window or the surface blood vessels. 
+%%
+
+\subsubsection{Localizer Sessions}
 A set of target candidate FOVs were identified in each animal with a viable window (clear cellular resolution, identified visual areas). Given the large suite of stimuli included in the survey and to maximize repeitions per condition, localizer sessions were run for each FOV to validate that the target FOV was in the visual area of interest, and to identify the best stimulus location to present localized, or non-full screen, stimuli for the objects and gratings blocks. For a given FOV, the targeted stimulus location for functional sessions was determined by taking the center of mass across all cells' receptive fields. As an additional constraint, only FOVs for which the bounding box around the largest sized stimuli were within the monitor's bounds were accepted for functional sessions.
 
-\subsubsection{Functional sessions}
+\subsubsection{Functional Sessions}
 Since the kinematic mounts allowed the same cells to be identified across days (see Figure\ref{fig:multiday_imaging}), it was possible to return to the same FOV that was mapped in a previous localizer session (usually mapped the previous day). Localized stimuli (drifting gratings and objects) were then centered at the target stimulus coordinates identified in the localizer sessions. In addition, both the moving bar retinotopic mapping paradigm and the receptive field mapping paradigm, both used in the initial localizer session, were repeated in the functional sessions. This allowed us to acquire receptive field estimates in the same cells and the same sessions in which object and gratings responses were collected, while avoiding the concern that different cells might be active during functional sessions than localizer sessions, or that receptive fields might subtly change from one day to the next.
 
-\subsection{Image processing}
+\subsection{Behavior Acquisition}
+High-resolution images of the animal's behavior state were acquired in sync with neural data acquisition using custom Python software. A CMOS camera (Manta G-033, Allied Vision) with a zoom lens was centered on the animal's head and upper body on the side facing the monitor, illuminated with an IR LED. Images were acquired at 20Hz. 
+% Image size, resolution REFREF
+% camera/sensor info
+% Lens/LED info?
+
+\subsection{Image Processing}
 Motion correction, ROI selection, neuropil correction, and trace extraction were done with a custom pipeline written in Matlab and Python. Motion correction used rigid transformations within each FOV using custom Matlab code (Chris Harvey, Harvard Medical School). 
-\subsubsection{Cell mask identification}
+\subsubsection{Cell Mask Identification}
 For ROI selection, an activity map was created by taking the standard deviation across motion-corrected frames within a movie file for each block of trials, and then taking the maximum projection across all blocks. ROIs were selected manually with a circular mask using a custom Matlab GUI. To remove background calcium signals, we estimated neuropil masks as circular annuli of 11$um$ width, with the inner edge at 9$um$ beyond the outermost edge of a corresponding cell body and the outer edge extending to 20$um$. Pixels from adjacent cell body masks were excluded from the neuropil masks. 
-
-\subsubsection{Time course extraction and correction}
+\subsubsection{Time Course Extraction and Correction}
 To get raw fluorescent traces for a given mask, the fluorescence intensity of a cell at each time point was computed as the average fluorescence across pixels within the mask. To correct for slow drift effects due to long imaging sessions, a correction procedure was applied. First, a baseline $F_0$ signal was extracted with a sliding filter (20\% percentile of a 30 sec sliding window) for each cell in each movie. For each trace, this drift was subtracted from the raw trace before adding back the mean of the offset value. 
-
 To account for neuropil signals that could contaminate the soma trace, neuropil correction was applied as follows: $F_{soma}$(t)=($F_{raw}$(t) - $F_{neuropil}$(t)) + $\overline{F}_{neuropil}$, where $t$ is time, $r$ is an empirical constant defined as the ratio $F_{bloodvessel}$/$F_{neuropil}$ (set to 0.7), and $\overline{F}_{neuropil}$ is the temporally-averaged mean of the neuropil fluorescence\cite{Liang2018, Kerlin2010}. For a subset of data, both Suite2p and CaImAn were tested.
 
 Fractional change in fluorescence, $\Delta$F/F(t), following visual stimulus presentation was calculated as: $\Delta$F/F(t)=(F(t)-F$_0$)/F$_0$, where F(t) is the corrected fluorescence trace during the stimulus presentation flanked by 1 sec before and after stimulus onset and offset, and F$_0$ is the 1 sec baseline period prior to stimulus onset. Single response values for a given trial were obtained by averaging the $\Delta$F/F(t) response during the stimulus presentation window x 2. The additional factor was to account for cells that exhibited OFF-type responses or slow response kinetics. 
 
-\subsection{Area identification and validation}
+\subsection{Area Identification and Validation}
 Each two-photon FOV was coregistered to wide-field retinotopic maps using blood vessel markers. All two-photon imaging sessions began with the acquisition of an anatomical volume, which was a  500$um$ z-stack taken from the surface. Prior to the start of the imaging session, rats were given subcutaneous injections of SR101 (Sigma-Aldrich) for fluorescent labeling of the blood vessels visible in the red channel. 
 
 Two-photon blood vessel images were matched to wide-field maps offline. Matching points between the two images were selected based on uniquely identifiable blood vessels, then used to identify a transformation matrix to warp one image into the other. Assignment of two-photon FOVs were validated based on retinotopic maps measured with the same cycling bar paradigm used for wide-field maps of azimuth and elevation. Sign maps were obtained from the retinotopic maps with a series of morphological filters\cite{Marshel2011, Garrett2014, Zhuang2017}, which were then used to identify patches representing putative visual areas. Two-photon FOVs were segmented based on the visual field sign maps (see Wide-Field Mapping, Area Segmentation). Since a given FOV could contain more than one visual area, cells were assigned based on both the segmented two-photon sign maps and the wide-field sign maps. Only two-photon FOVs with matches to wide-field maps and unambiguous sign reversals were included for subsequent analyses. 
 
+\subsection{Pose Extraction}
+% DLC
+% training parameters (DLC, v2)
+% manual selection
 
+
+% ----------------------------------------------------------
+% Retintopy/Receptive fields
+% ----------------------------------------------------------
 \subsection{Estimation of retinotopic tuning preferences}
-
 \subsubsection{Retinotopic preferences of background neuropil}
 The center of each neuropil ring was first assigned a value corresponding to the preferred retinotopic location of the neuropil ring (average over all pixels within the ring). The center was then dilated to a disk of 20$um$ radius, averaging the preferred retinotopy for overlapping disks. Pixel-wise estimates of retinotopic preference were obtained by smoothing the resulting dilated and averaged image with an isotropic two-dimensional Gaussian filter with standard deviation of 7$um$. 
 
@@ -134,7 +153,7 @@ $D_{VF}=|Ret_{pref}(\tilde{x}) - Ret_{fit}(\tilde{x})|$, where $Ret_{pref}(\tild
 % GRATINGS
 % ----------------------------------------------------------
 %\section{Estimation of tuning preferences}
-\subsection{Tuning preferences of cells visually responsive to drifting gratings}
+\subsection{Tuning preferences of cells responsive to drifting gratings}
 For each cell and each stimulus condition, we determined the evoked response to be significantly different from noise if the amplitude of dF/F during the stimulus period exceeded 2.5 standard deviations above or below the mean baseline activity (computed using 0.5s or 1s prior to stimulus onset) for at least 10 out of the 44 time points (44.65 Hz frame rate * (0.5 s stimulus presentation + 0.5 s after stimulus offset)).
 
 To determine if a given cell showed a significant response at a particular stimulus configuration (a unique combination of size, speed, spatial frequency), we required that at least 2 out of the 8 directions at this given stimulus configuration evoked responses according to the above criteria. Axis selectivity, direction selectivity, and preferred theta were calculated following previously published metrics\cite{Liang2018}. 
@@ -165,29 +184,19 @@ A direction selective index (DSI) was computed in a similar way, the responses w
 
 A cell was determined to be direction-selective if a) it had a significant response to the grating stimuli (see ``Estimation of cells visually responsive for drifting gratings''), b) it had a well-fit direction tuning curve (see ``Direction tuning curve fitting''), and c) it had an average direction selectivity index (DSI) greater than or equal to 0.2\cite{Liang2018} for all stimulus combinations to which it had a significant response. Similarly, a cell was considered to be axis-selective if a) it had a significant response to the grating stimuli, b) it had a well-fit direction tuning curve, and c) its ASI exceeded 0.15 and its DSI was less than 0.2 for all stimulus combinations for which a significant response was observed.
 
-\subsubsection{Estimation of preferred direction and axis of motion}
+\subsubsection{Estimation of preferred direction}
 For direction-selective cells, preferred direction of motion was determined by taking the circular average of the fitted $\theta_{pref}$ across stimulus combinations for which a significant response was observed, and direction tuning curves passed goodness-of-fit thresholds. 
 
-\subsubsection{Preference Index for Spatial Frequency, Size, and Speed}
-Bootstrap analysis:  N trials resampled (with replacement) for each condition.
-For each non-ori param, estimate 95\% CI. If 95\% CI > 0 and measured parameter preference within 95\% CI, considered reliable.
-If reliable, then calculate tuning index:  (low-high)/(low+high). 
-
+\subsubsection{Preference Metrics for Spatial Frequency, Size, and Speed}
+For cells exhibiting significant visual responses to the drifting gratings, a preference index was calculated for each non-direction parameter, \textit{i.e.}, spatial frequency, size, and speed. Each non-direction parameter was tested at two levels, one low and one high, and the preference index were defined as:  $(R_{low}-R_{high})/(R_{low}+R_{high})$, which ranged from -1 (preference for lower) and 1 (preference for higher). For each cell, a bootstrap procedure was used to determine whether each preference index was significantly different from zero. Specifically, a preference index was calculated for each of N iterations by sampling trials (with replacement) for each of the 64 conditions, creating a distribution of preference index values. The cell's preference index was considered significant for that parameter if the 95\% CI did not contain 0 (no preference). To compare the distribution of preference indices across visual areas for a given parameter (spatial frequencty, size, or speed), only cells with a significant preference index for that parameter were included.
 
 %%%% 
+% ----------------------------------------------------------
+% Objects
+% ----------------------------------------------------------
+\subsection{Tuning preferences of cells responsive to objects}
 
-
-% Data acquisition
-% Visual stimuli, synced to two-photon acquisition, ScanImage vX.X (REFREF). 
-% Synced also to face-tracker camera.
-% Image preprocessing
-% stuff
-% Cell mask identification
-% stuff
-% Time course extraction and correction
-% Stuff
-
-\subsection{Estimation of cells with significant visual responses to objects}
+\subsubsection{Estimation of cells with significant visual responses to objects}
 For each cell, stimulus evoked responses were determined to be significant using a receiver-operating-characteristic (ROC) analysis from signal detection theory\cite{}. For each cell, a distribution of stimulus responses and a distribution of baseline responses were obtained for each stimulus condition (one response value per trial). For each condition, an ROC curve was obtained across a range of criterion levels (50 levels, linearly sampled between the cell's minimum and maximum stimulus response values) by calculating the proportion of times the stimulus and baseline responses exceeded a given criterion level. The area under the ROC curve (AUC) was calculated for each condition, such that a value of 0.5 corresponds to fully overlappying stimulus and baseline response distributions, while increasingly larger values indicate increased separability between the stimulus and response distributions. The maximum AUC value for a given cell thus corresponded to the stimulus condition for which the cell's responses were maximally distinguishable from baseline responses. For each cell, the significance of its maximum AUC value was evaluated by a shuffle test:  for each of 1000 iterations, the baseline and stimulus labels were shuffled, ROC curves and AUC values were calculated, and the likelihood of the cell's maximum AUC was determined as the fraction of times the true AUC was greater than the AUCs derived from the shuffled labels. Only cells with significant AUCs (p<0.05) were included as visually responsive. 
 
 \subsubsection{Selectivity and tolerance metrics}
@@ -197,8 +206,21 @@ MT=[n-(\sum_{i=1}^{9}R_i/R_{max})]/(n-1),
 \end{align}
 where $R_i$ is a neuron’s response to the $i^{th}$ morph ($n=9$ morphs), $R_{max}$ is the maximum response amongst the morphs. As a measure of response sparseness, MT ranges from 0 (no shape selectivity) to 1 (maximally shape selective). Size tolerance was quantified by normalizing size tuning curves to their maximum values, then averaging those resulting values that were < 1:  $ST=<R_{test}/max(R_{test})>$, where $R_{test}$ is the mean response to a given stimulus size of a neuron’s most preferred object, and $<.>$ denotes the average across tested stimulus sizes where $R_{test}<max(R_{test})$\cite{Zoccolan2007}. 
 
-\subsection{Population readout}
-\subsubsection{Discriminability}
+
+\subsection{Single-cell Discriminability}
+% DLC
+% training parameters (DLC, v2)
+% manual selection
+
+
+\subsection{Arousal modulation}
+% DLC
+% training parameters (DLC, v2)
+% manual selection
+
+
+%\subsection{Population readout}
+\subsubsection{Population Discriminability}
 To quantify discriminability, we trained linear classifiers (support vector machines) to discriminate the two original objects from the neural activity in each area. The linear-readout scheme is important in that it is a simple, biologically plausible processing step that amounts to a thresholded sum taken over weighted synapses. This classifier approach does not provide a measure for the total information present in the population, but rather estimates the lower bound on the information explicitly accessible to the population to support the visual task\cite{Hung2005, Rust2010SelectivityIT}.
 
 Linear support vector machines (SVMs) were trained to discriminate object A from object B from neural responses. Each presentation of an image produced a population response vector \textbf{x} of size $Nx1$, such that repeated presentations form a cluster of points in $N$-dimensional space (see Figure\ref{fig:neural_generalization}). The linear readout amounts to finding a linear hyperplane that best separates the response clouds corresponding to each image from those corresponding to all other images. Specifically, the linear readout amounts to\cite{Rust2010SelectivityIT, Hung2005, Li2009}: 
@@ -207,7 +229,7 @@ f(\textbf{x})=\textbf{w}^T\textbf{x} + b,
 \end{align}
 where \textbf{w} is a $Nx1$ vector of the linear weights applied to each of $N$ neurons (defines the orientation of the hyperplane), and $b$ is a scalar that offsets the hyperplane from the origin. To determine the population’s choice about which image was presented, a response vector \textbf{x} (population response to one image) was applied to the classifier, and negative values of f(\textbf{x}) indicate object A and positive values indicate object B. Performance was defined as the proportion of correct answers when asked to classify each image with a held-out test set never included in training. 
 
-The hyperplane and threshold for each classifier was determined by a support vector machine (SVM) using the scikit-learn machine learning library (LinearSVC\cite{Pedregosa2011}). The data were split into train and test sets (20\%) after balancing numbers of samples per condition. We used a 5-fold cross-validation procedure on the train set to fit and evaluate each model:  of the trials partitioned for training, models were optimized where the best $C={10^{-3}, 10^{-2}, 10^{-1}, 1, 10, 10^2, 10^3}$ that yielded the highest accuracy was chosen. Performance was then assessed with the held-out test set. 
+The hyperplane and threshold for each classifier was determined by a support vector machine (SVM) using the scikit-learn machine learning library (LinearSVC\cite{Pedregosa2011}). The data were split into train and test sets (20\%) after balancing numbers of samples per condition. We used a 5-fold cross-validation procedure on the train set to fit and evaluate each model:  of the trials partitioned for training, models were optimized where the best $C=\{10^{-3}, 10^{-2}, 10^{-1}, 1, 10, 10^2, 10^3\}$ that yielded the highest accuracy was chosen. Performance was then assessed with the held-out test set. 
 
 \subsubsection{Linear separability and generalization}
 To test linear separability (see Figure\ref{fig:neural_generalization}), 80\% of the trials corresponding to object A and object B for each size were simultaneously combined to train and evaluate the models, while the remaining 20\% of trials was used to measure classifier performance. To test generalization, two regimes were used. In the first, ``Train one, test one'' (Figure\ref{fig:neural_generalization}B-D), each classifier was trained to classify object A and B at one of the 5 sizes, then tested on each of the remaining 4 untrained sizes. Each training set (for each size) included 80\% of the trials for a given size, while the test sets could contain either the remaining 20\% of trials of the same size (test accuracy on ``trained'' conditions) or 100\% of the trials at one of the other sizes (test accuracy on ``novel'' conditions). 
