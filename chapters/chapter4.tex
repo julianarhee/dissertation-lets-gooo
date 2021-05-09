@@ -22,24 +22,24 @@ Consistent with previous studies in rats, and what might be expected from a prim
 % Single neuron selectivity and tolerance
 % ---------------------------------------------------------------
 \section{Single neurons exhibit selectivity and tolerance}
+\begin{figure}[t!]
+    \includegraphics[width=\textwidth]{figures/chapter_4/fig_4-1_single_cell_selectivity_tolerance/fig_4-1_single_cell_selectivity_tolerance.pdf}
+    \caption[Single neuron selectivity and tolerance]{Selectivity and tolerance. 
+    \textbf{A.} Transformations tested: 5 stimulus sizes (identity-preserving) and 9 morph levels (identity-changing). 5 luminance stimuli (fullscreen) were matched for each size
+    \textbf{B.} Rat visual areas in this study. 
+    \textbf{C.} Morph selectivity (left) and size tolerance (right) for an example V1 FOV. Black lines, single cell tuning profiles. Color lines, example cells: Green, the first set of traces (middle). Purple, the lower set (bottom). Time courses arranged as in \textbf{A}. Lines and shading, mean and SEM across repeats.
+    \textbf{D.} Same as \textbf{C}, but for an LM FOV.
+    \textbf{E.} Same as \textbf{B} and \textbf{C}, but for an LI FOV.
+    \textbf{F.} Distributions of size tolerance for V1, LM, and LI cells. Each dot is a cell, black lines denote mean and SD across cells.
+    \textbf{G.} Same as \textbf{F}, but for morph selectivity. 
+    \textbf{H.} Correlation between size tolerance and morph selectivity for example V1 (left), LM (middle), and LI (right) FOVs. Each dot is a cell. Line and shading, linear fit and 95\% CI.
+    \label{fig:selectivity_tolerance}}
+\end{figure}
+
 One key feature of the primate ventral stream is a gradual increase in shape or object selectivity and a parallel increase in tolerance to identity-preserving transformations. Previous studies have shown that single-units in monkey IT exhibit a trade-of between these properties: neurons that are highly selective are less tolerant to identity-preserving transformations and highly tolerant neurons are not as selective to particular objects\cite{Zoccolan2007}.
 
 To determine whether single neurons exhibited similar characteristics in rat visual areas, we first measured single neuron response profiles in areas V1, LM, and LI. For identity-changing transformations, we tested a subset of the morphs used to probe trained animals’ naive perceptual boundaries, and for identity-preserving transformations, we tested a subset of sizes covering the range of stimulus sizes used to test behavioral generalization to identity-preserving transformations (see Chapter 1, Figure\ref{fig:behavior_generalization}). Since size changes come with large changes in luminance, we also presented a subset of full-screen gray-scale stimuli that were luminance-matched to each size tested (Figure\ref{fig:selectivity_tolerance}A).
 
-\begin{figure}[t!]
-    \includegraphics[width=\textwidth]{figures/chapter_4/fig_4-1_single_cell_selectivity_tolerance/fig_4-1_single_cell_selectivity_tolerance.pdf}
-    %\vspace{.1in}
-    \caption[Single neuron selectivity and tolerance]{Selectivity and tolerance. 
-    \textbf{A.} 5 stimulus sizes tested identity-preserving transformations, and 9 morph levels tested identity-changing transformations. 5 luminance stimuli (fullscreen, grayscale) were included to as a control for luminance changes due to size changes. 
-    \textbf{B.} Schematic of rat visual cortex highlighting the areas under study. 
-    \textbf{C.} Morph selectivity (left) and size tolerance (right) for an example V1 FOV cell. Black curves, single cell tuning profiles. Color curves, example cells with timecourses shown below. Green, the first set of traces (middle). Purple, the lower set (bottom). Timecourses grid, arranged as in \textbf{A}. Black lines and shading, mean and SEM across repeats.
-    \textbf{D.} Same as \textbf{C}, but for an example LM FOV.
-    \textbf{E.} Same as \textbf{B} and \textbf{C}, but for an example LI FOV.
-    \textbf{F.} Distributions of size tolerance for V1, LM, and LI cells. Each dot is a cell, black lines denote mean and SD across cells.
-    \textbf{G.} Same as \textbf{F}, but for single cell measures of morph selectivity. 
-    \textbf{H.} Correlation between size tolerance and morph selectivity for example V1 (left), LM (middle), and LI (right) FOVs. Each dot is a cell. Line and shading, fit and 95\% CI.
-    \label{fig:selectivity_tolerance}}
-\end{figure}
 
 All areas contained a diverse range of object selective and size tolerant cells. For example, even in one V1 FOV, we found cells that exhibited clear size tuning without morph selectivity, morph tuning that was preserved across different sizes, as well as luminance-tuned cells that were also sensitive or insensitive to the different morphs and sizes. Overall, we found that across our object stimuli, cells in LI had the lowest lifetime sparseness, while cells in V1 and LM were similarly high in sparseness. Since the images varied in morph level and size, the sparseness observed in V1 and LM could reflect a higher selectivity for morph shapes or a lower tolerance for varying sizes. To quantify the amount of object selectivity and tolerance, we calculated a morph selectivity index (MX) and a size tolerance index (ST) for each cell\cite{Zoccolan2007}. We found a range of tuning profiles across cells that was comparable between the three areas (Figure\ref{fig:selectivity_tolerance}B-D). On average, we found that relative to V1 and LM, LI cells were both less selective to morphs and more tolerant to size (Figure\ref{fig:selectivity_tolerance}E-F). Notably, this difference was not attributable to overall lower response magnitudes in LI: although we found fewer LI cells selective or responsive to the object stimuli overall, of the cells that were responsive, response magnitudes were comparable across areas. 
 
@@ -74,6 +74,9 @@ Since the animals were head-fixed and awake, we were able to monitor their face 
 % ---------------------------------------------------------------
 \section{Single cells show object discriminability}
 % Morphs -- neurometric curves, single-neuron disriminability
+
+Given the range of shape selectivity and size tolerance we observed in single cells across areas V1, LM, and LI, we next determined the extent to which cells could discriminate object identity for the two anchor objects. When we tested the trained rats (Chapter 1), we first trained them to correctly recognize object A from object B, and rats had to pass a criterion performance level of at least 70\% accuracy --- only rats that demonstrated clear discrimination performance were included in tests of perceptual similarity along the morph continuum. However, since the rats we imaged here were not trained, the anchor objects did not have any particular meaning: it is not necessarily the case that cells should faithfully track the shape continuum from one anchor extreme to the other. Rather, a cell could selectively prefer one of the intermediate morphs (for example, the green cell shown under LI in Figure\ref{fig:selectivity_tolerance}E). 
+
 \begin{figure}[t!]
     \includegraphics[width=\textwidth]{figures/chapter_4/fig_4-3_neurometric/fig_4-3_neurometric.pdf}
     %\vspace{.1in}
@@ -84,7 +87,6 @@ Since the animals were head-fixed and awake, we were able to monitor their face 
     \label{fig:neurometric}}
 \end{figure}
 
-Given the range of shape selectivity and size tolerance we observed in single cells across areas V1, LM, and LI, we next determined the extent to which cells could discriminate object identity for the two anchor objects. When we tested the trained rats (Chapter 1), we first trained them to correctly recognize object A from object B, and rats had to pass a criterion performance level of at least 70\% accuracy --- only rats that demonstrated clear discrimination performance were included in tests of perceptual similarity along the morph continuum. However, since the rats we imaged here were not trained, the anchor objects did not have any particular meaning: it is not necessarily the case that cells should faithfully track the shape continuum from one anchor extreme to the other. Rather, a cell could selectively prefer one of the intermediate morphs (for example, the green cell shown under LI in Figure\ref{fig:selectivity_tolerance}E). 
 
 % To determine the extent to which cells can discriminate the original anchor objects, similar to the way we trained the behaving rats to do so, we selected a subset of cells that did exhibit selectivity to one anchor over the other (see Methods). Specifically, we measured neural performance on the object discrimination task as the neuron's ability to distinguish object A from object B at each level of morph (Figure\ref{fig:neurometric}A). At the lowest level, the morph level is 50\%A and 50\%B, and so the two objects to be discriminated are equally A and equally B, and thus, discriminability should be at chance. From 0, morph differences increase, \textit{e.g.}, from 40/60 to 30/70, and so on, until the maximum level difference, 0/100, which just is the original anchor objects A and B (i.e., 0\%B is 100\%A, and vice versa). For each neuron, we quantified the degree of overlap between its responses to two alternatives with a receiver operating characteristic (ROC) analysis \cite{Britten1992, Rust2010SelectivityIT}. For example, given an image that is 30\%B (alternative 1) and one that is 70\%B (alternative 2), we generated an ROC curve by computing the proportion of trials for alternative 1 on which the cell's response exceeded the criterion versus the proportion of trials for alternative 2 on which the response exceeded the criterion, for a range of criteria. The AUC is then taken as the area under this curve. The curve is calculated for each stimulus level, and the AUCs under each of these curves are then fit with a neurometric curve. 
 
