@@ -44,17 +44,20 @@
   \label{tab:software}
 \end{table}
 
+
+%http://n2t.net/addgene:104488; RRID:Addgene_104488
+
 % Data numbers 
 \begin{table}[h]
   \caption{Data Summary}
   \centering
   \begin{tabular}{lllll}
     \toprule
-    Stimulus & Area & Rats & FOVs & Cells   \\
+    Stimulus & Area & Rats & FOVs & Responsive or Fit Cells   \\
     \midrule
-    Moving bar & V1  & 5 & 12 & 1277        \\
-               & LM  & 6 & 14 & 530         \\
-               & LI  & 4 & 9 & 502          \\
+    Moving bar & V1  & 7 & 9 & 1277        \\
+               & LM  & 7 & 9 & 530         \\
+               & LI  & 6 & 9 & 502          \\
     \midrule
     Receptive Fields & V1  & 11 & 11 & 548  \\
                      & LM  & 8 & 8 & 241   \\
@@ -72,13 +75,12 @@
   \label{tab:data_counts}
 \end{table}
 
-
-
+\clearpage
 
 \section{Supplementary Figures}
 
 % \section{Related to Chapter 1}
-\begin{figure}
+\begin{figure}[hbt!]
 \includegraphics[width=\textwidth]{figures/supplemental/fig_s1_aggregate_training/fig_s1_aggregate_training.pdf}
     \vspace{.1in}
     \caption[Aggregate training data]{Aggregate training data. 
@@ -90,7 +92,7 @@
 
 
 % FIGURE S.2 MORPH
-\begin{figure}[t!]
+\begin{figure}
 \includegraphics[width=\textwidth]{figures/supplemental/fig_s2_morphs_per_animal/fig_s2_morphs_per_animal.pdf}
     \caption[Individual psychometric curves]{Individual psychometric curves for morphs. 
     \textbf{A.} Example psychometric curves for n=10 out 13 rats that passed criterion performance (70\% accuracy on the basic discrimination of the anchors). Each dot represents the fraction of times the animal chose the ``B''-assigned port, where morph level 0 is 0\%B and morph level 100 is 100\%B. Solid curves are the fits, vertical lines indicate bias. 
@@ -130,13 +132,12 @@
 
 
 % \subsection{Comparison of stimulus size for receptive field measurements}
-\begin{figure}[t!]
+\begin{figure}[tp!]
 \includegraphics[width=\textwidth]{figures/supplemental/fig_s6_rf5_v_rf10/fig_s6_rf5_rf10.pdf}
-    \vspace{.1in}
-    \caption[RF mapping stimuli]{Effect of stimulus size for RF measurements.
+    \caption[RF mapping stimuli]{RFs measured with 2 stimulus sizes.
     \textbf{A.} Number of cells with well-fit RFs (see Methods) for \ang{5} (light green) and \ang{10} (dark green) tile sizes. Each dot is an imaging site.
-    \textbf{B.} Number of fit RFs for imaging sites in which both tile sizes were tested for V1 (left), LM (middle), and LI (right). Overlap shows cells fit with both stimulus size. Light green, \ang{5}. Dark green, \ang{10}.
-    \textbf{C.} Scatter plots of RF parameters from fits using the \ang{5} (x-axis) and \ang{10} (y-axis) for cells fit with both. Columns represent estimated parameters of the 2-D Gaussian (RF width: $\sigma_x$, RF height: $\sigma_y$, RF center (x): $x_0$, RF center (y): $y_0$). Row 1, magenta: V1. Row2, orange: LM. Row 3, blue: Li. Row 4: x- and y-scatter data plotted side-by-side. Axis titles above Row 4 plots indicate visual areas for which there was a significant difference between \ang{5} and \ang{10} tiles (Wilcoxon rank test, *:p<0.05, **:p<<0.01).
+    \textbf{B.} RF counts for FOVs in which both tile sizes were tested for V1 (left), LM (middle), and LI (right). Overlap, cells fit with both sizes. Light green, \ang{5}. Dark green, \ang{10}.
+    \textbf{C.} Scatter plots of RF parameters from fits using the \ang{5} (x-axis) and \ang{10} (y-axis) for cells fit with both. Columns represent estimated parameters of the 2-D Gaussian ($\sigma_x$, $\sigma_y$, $x_0$, $y_0$). Row 1 (magenta): V, Row 2 (orange): LM, Row 3 (blue): Li. Row 4, scatterplot data plotted side-by-side for the parameter in the column (\ang{5}: light green, left, \ang{10}: dark green, right) for each area. Axis titles above Row 4 plots indicate visual areas for which there was a significant difference between stimulus sizes (Wilcoxon rank test, *:p<0.05, **:p<<0.01).
     \label{supfig:rf5_rf10}}
 \end{figure}
 
