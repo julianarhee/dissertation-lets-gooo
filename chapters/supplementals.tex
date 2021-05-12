@@ -1,4 +1,4 @@
-\chapter{Supplemental Materials}
+\chapter{Supplemental Information}
 \label{supplementals}
 
 % Software list/table
@@ -8,7 +8,7 @@
 
 \section{Supplementary Tables}
 
-\begin{table}[h]
+\begin{table}[ht]
   \caption{Software and Available Repositories}
   \centering
   \footnotesize
@@ -141,10 +141,20 @@
     \label{supfig:rf5_rf10}}
 \end{figure}
 
+% \subsection{Comparison of stimulus size for receptive field measurements}
+\begin{figure}[tp!]
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s7_rf5_rf10_aggregate/fig_s7_rf5_rf10_aggregate.pdf}
+    \caption[RF mapping stimuli]{RFs measured with 2 stimulus sizes.
+    \textbf{A.} Number of cells with well-fit RFs (see Methods) for \ang{5} (light green) and \ang{10} (dark green) tile sizes. Each dot is an imaging site.
+    \textbf{B.} RF counts for FOVs in which both tile sizes were tested for V1 (left), LM (middle), and LI (right). Overlap, cells fit with both sizes. Light green, \ang{5}. Dark green, \ang{10}.
+    \textbf{C.} Scatter plots of RF parameters from fits using the \ang{5} (x-axis) and \ang{10} (y-axis) for cells fit with both. Columns represent estimated parameters of the 2-D Gaussian ($\sigma_x$, $\sigma_y$, $x_0$, $y_0$). Row 1 (magenta): V, Row 2 (orange): LM, Row 3 (blue): Li. Row 4, scatterplot data plotted side-by-side for the parameter in the column (\ang{5}: light green, left, \ang{10}: dark green, right) for each area. Axis titles above Row 4 plots indicate visual areas for which there was a significant difference between stimulus sizes (Wilcoxon rank test, *:p<0.05, **:p<<0.01).
+    \label{supfig:rf5_rf10_aggregate}}
+\end{figure}
+
 
 % \subsection{Demonstration of spherical correction}
 \begin{figure}[t!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s7_spherical_correction_steps/fig_s7_spherical_correction_steps.pdf}
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s8_spherical_correction_steps/fig_s8_spherical_correction_steps.pdf}
     \vspace{.1in}
     \caption[Spherical correction]{Steps for posthoc spherical correction.
     \textbf{A.} Screen coordinates of the monitor in degrees of visual angle. Green, isoelevation lines. Magenta, isoazimuth. \textit{Middle}: Estimate of what the animal perceives without spherical correction. \textit{Left}: Transform to warp RF responses measured without spherically-corrected stimuli. 
@@ -155,7 +165,7 @@
 
 % \subsection{Spherical correction, examples}
 \begin{figure}[t!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s8_spherical_correction_examples/fig_s8_spherical_correction_examples.pdf}
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s9_spherical_correction_examples/fig_s9_spherical_correction_examples.pdf}
     \vspace{.1in}
     \caption[Example RFs after spherical correction]{Example receptive field fits before and after spherical correction.
     \textbf{A.} Top 30 cells (ranked by goodness-of-fit measure, coefficient-of-determination $R2$) for an example V1 FOV. Red, original RF fit. Blue, RF fit after warping. 
@@ -166,7 +176,7 @@
 
 % \subsection{Spherical correction, aggregate}
 \begin{figure}[t!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s9_spherical_correction_aggregate/fig_s9_spherical_correction_aggregate.pdf}
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s10_spherical_correction_aggregate/fig_s10_spherical_correction_aggregate.pdf}
     \vspace{.1in}
     \caption[RF properties after spherical correction]{Receptive field properties after spherical correction. 
     \textbf{A.} Average size (left), measured as half-width at half-max (HWHM) of a fit 2D-Guassian. Also shown is the projection of the major axis of each ellipse onto the horizontal (middle) and vertical (right) axes of visual space for each cell. Each dot represents one cell. Horizontal and vertical bars, mean and SD across cells. 
@@ -177,7 +187,7 @@
 
 % \subsection{Comparison of receptive field and gratings tuning}
 \begin{figure}[t!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s10_theta_vs_rf/fig_s10_theta_vs_rf.pdf}
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s11_theta_vs_rf/fig_s11_theta_vs_rf.pdf}
     \vspace{.1in}
     \caption[Direction selectivity and RF orientation]{Direction selectivity by receptive field orientation.
     \textbf{A.} Distributions of preferred theta (direction of motion) for cells with well-fit direction tuning curves and well-fit RFs (see Methods), split by binned RF orientation, for V1 cells. Inset at the upper left of each subplot shows the actual RF fits for the cells whose preferred theta distributions are shown in the corresponding histogram. Solid curves, estimated KDEs (kernel density estimates). 
@@ -189,6 +199,14 @@
 
 
 % \section{Related to Chapter 4}
+\begin{figure}[t!]
+\includegraphics[width=\textwidth]{figures/supplemental/fig_s12_luminance_corr/fig_s12_luminance_corr.pdf}
+    \vspace{.1in}
+    \caption[Luminance and size tuning]{Relationship between luminance selectivity and size selectivity.
+    \textbf{A.} Distributions of absolute values of correlation coefficients for cells with significant relationships between size tuning and luminance tuning (Pearson's, p<0.05) for visually responsive cells in V1, LM, and LI. Each dot represents one cell. Vertical and horizontal bars, mean and SD. 
+    \textbf{B.} Fraction of cells with significant correlations for each visual area recorded in V1, LM, and LI. Each dot represents one imaging site.  
+    \label{supfig:luminance_corr}}
+\end{figure}
 
 % \subsection{Tuning similarity as a function of distance}
 

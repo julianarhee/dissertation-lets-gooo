@@ -57,7 +57,7 @@
 \RequirePackage{fancyhdr}
 
 \usepackage[titletoc]{appendix}
-\renewcommand{\setthesection}{\arabic{chapter}.A\arabic{section}}
+\renewcommand{\setthesection}{\arabic{chapter}.S\arabic{section}}
 
 \RequirePackage{setspace}
 \RequirePackage{booktabs}
