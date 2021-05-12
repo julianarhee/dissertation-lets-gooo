@@ -1,8 +1,6 @@
 \chapter{Supplemental Materials}
 \label{supplementals}
 
-To do.
-
 % Software list/table
 % DeepLabCut \href{https://github.com/DeepLabCut/DeepLabCut}
 % MWorks \href{https://mworks.github.io}
@@ -10,19 +8,41 @@ To do.
 
 \section{Supplementary Tables}
 
-% Custom software
-\href{https://github.com/coxlab/behavior_rig}
-\href{https://github.com/julianarhee/morph-pov}
-
-\href{https://github.com/julianrhee/retinotopy-mapper}
-\href{https://github.com/julianarhee/acquisition-tools}
+\begin{table}[h]
+  \caption{Software and Available Repositories}
+  \centering
+  \footnotesize
+  \begin{tabular}{ p{3cm}p{7.5cm}p{2.5cm}  }
+    \toprule
+    Resource & Source & Related Publications \\
+    \midrule
+    OpenRatBox  & https://github.com/coxlab/behavior\_rig & N/A \\ 
+                & https://github.com/coxlab/protocols & N/A \\ 
+                & https://github.com/julianarhee/trainingtracker & N/A \\ 
+    \midrule
+    Visual Stimuli & https://github.com/julianarhee/morph-pov & N/A \\
+                   & https://github.com/coxlab/povray & \citet{Zoccolan2009} \\
+    \midrule
+    Retinotopic Mapping & https://github.com/julianarhee/retinotopy-mapper & N/A \\ 
+                        & https://github.com/zhuangjun1981/retinotopic\_mapping & \citealt{Zhuang2017}\\
+    \midrule
+    ScanImage   & http://scanimage.vidriotechnologies.com & \citet{Pologruto2003} \\ 
+    \midrule
+    2p Processing  & https://github.com/julianarhee/acquisition-tools & N/A \\ 
+                   & https://github.com/HarveyLab/Acquisition2P\_class & N/A \\
+                   & https://github.com/HarveyLab/helperFunctions & N/A \\
+    \midrule
+    Scikit Learn   & https://scikit-learn.org & \citet{Pedregosa2011} \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:software}
+\end{table}
 
 % Data numbers 
-
 \begin{table}[h]
- \caption{Data Summary}
+  \caption{Data Summary}
   \centering
-   \begin{tabular}{lllll}
+  \begin{tabular}{lllll}
     \toprule
     Stimulus & Area & Rats & FOVs & Cells   \\
     \midrule
@@ -47,11 +67,12 @@ To do.
 \end{table}
 
 
+
+
 \section{Supplementary Figures}
 
-
 % \section{Related to Chapter 1}
-\begin{figure}[t!]
+\begin{figure}
 \includegraphics[width=\textwidth]{figures/supplemental/fig_s1_aggregate_training/fig_s1_aggregate_training.pdf}
     \vspace{.1in}
     \caption[Aggregate training data]{Aggregate training data. 
