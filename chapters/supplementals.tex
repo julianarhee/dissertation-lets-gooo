@@ -133,17 +133,18 @@
 
 % \subsection{Comparison of stimulus size for receptive field measurements}
 \begin{figure}[tp!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s6_rf5_v_rf10/fig_s6_rf5_rf10.pdf}
+\includegraphics[width=0.95\textwidth]{figures/supplemental/fig_s6_rf5_v_rf10/fig_s6_rf5_rf10.pdf}
+    \centering
     \caption[RF mapping stimuli]{RFs measured with 2 stimulus sizes.
-    \textbf{A.} Number of cells with well-fit RFs (see Methods) for \ang{5} (light green) and \ang{10} (dark green) tile sizes. Each dot is an imaging site.
-    \textbf{B.} RF counts for FOVs in which both tile sizes were tested for V1 (left), LM (middle), and LI (right). Overlap, cells fit with both sizes. Light green, \ang{5}. Dark green, \ang{10}.
-    \textbf{C.} Scatter plots of RF parameters from fits using the \ang{5} (x-axis) and \ang{10} (y-axis) for cells fit with both. Columns represent estimated parameters of the 2-D Gaussian ($\sigma_x$, $\sigma_y$, $x_0$, $y_0$). Row 1 (magenta): V, Row 2 (orange): LM, Row 3 (blue): Li. Row 4, scatterplot data plotted side-by-side for the parameter in the column (\ang{5}: light green, left, \ang{10}: dark green, right) for each area. Axis titles above Row 4 plots indicate visual areas for which there was a significant difference between stimulus sizes (Wilcoxon rank test, *:p<0.05, **:p<<0.01).
+    \textbf{A.} Number of cells with well-fit RFs (see Methods) for \ang{5} (light green) and \ang{10} (dark green) stimulus sizes. Each dot is a FOV.
+    \textbf{B.} RF counts for FOVs in which both sizes were tested for V1, LM, and LI. Overlap, cells fit with both sizes. Light green, \ang{5}. Dark green, \ang{10}.
+    \textbf{C.} Scatter plots of RF parameters using the \ang{5} (x-axis) and \ang{10} (y-axis) for cells fit with both. Columns represent estimated parameters of the 2-D Gaussian ($\sigma_x$, $\sigma_y$, $x_0$, $y_0$). Row 1 (magenta): V, Row 2 (orange): LM, Row 3 (blue): Li. Row 4, scatterplot data plotted side-by-side for the parameter in the column (\ang{5}: light green, left, \ang{10}: dark green, right) for each area. Axis titles above Row 4 plots indicate visual areas for which there was a significant difference between stimulus sizes (Wilcoxon rank test, *:p<0.05, **:p<<0.01).
     \label{supfig:rf5_rf10}}
 \end{figure}
 
 % \subsection{Comparison of stimulus size for receptive field measurements}
 \begin{figure}[tp!]
-\includegraphics[width=\textwidth]{figures/supplemental/fig_s7_rf5_rf10_aggregate/fig_s7_rf5_rf10_aggregate.pdf}
+\includegraphics[width=0.8\textwidth]{figures/supplemental/fig_s7_rf5_rf10_aggregate/fig_s7_rf5_rf10_aggregate.pdf}
     \caption[RF mapping stimuli]{RFs measured with 2 stimulus sizes.
     \textbf{A.} Number of cells with well-fit RFs (see Methods) for \ang{5} (light green) and \ang{10} (dark green) tile sizes. Each dot is an imaging site.
     \textbf{B.} RF counts for FOVs in which both tile sizes were tested for V1 (left), LM (middle), and LI (right). Overlap, cells fit with both sizes. Light green, \ang{5}. Dark green, \ang{10}.
@@ -159,7 +160,7 @@
     \caption[Spherical correction]{Steps for posthoc spherical correction.
     \textbf{A.} Screen coordinates of the monitor in degrees of visual angle. Green, isoelevation lines. Magenta, isoazimuth. \textit{Middle}: Estimate of what the animal perceives without spherical correction. \textit{Left}: Transform to warp RF responses measured without spherically-corrected stimuli. 
     \textit{B.} Steps for spherically correcting measured RF responses. First, the measured RF array, corresponding to the cell's average response to each stimulated position, is transformed to pixel coordinates (left, downsampled screen resolution is upsampled RF array). Then, the transformation shown in \textbf{A} is applied to the RF array (middle). The overlay (right) shows the warped RF array (blue) overlaid on the original RF array (red) in pixel coordinates.
-    \textit{C.} Steps to convert spherically-corrected RF ararys back to coordinates of the tiled RF map. Left, the original RF array showing the cell's response to each of the tiled position. Middle, The upsampled and warped RF array (middle panel directly above in \textbf{B}) is then trimmed and downsampled back to the tiled position coordinates (as opposed to the upsampled pixel coordinates). Right, overlay of the ``corrected'' RF array (blue) ontop of the origin RF array (red).
+    \textbf{C.} Steps to convert spherically-corrected RF ararys back to coordinates of the tiled RF map. Left, the original RF array showing the cell's response to each of the tiled position. Middle, The upsampled and warped RF array (middle panel directly above in \textbf{B}) is then trimmed and downsampled back to the tiled position coordinates (as opposed to the upsampled pixel coordinates). Right, overlay of the ``corrected'' RF array (blue) ontop of the original RF array (red).
     \label{supfig:spherical_correction_steps}}
 \end{figure}
 
