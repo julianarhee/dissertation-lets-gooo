@@ -28,6 +28,7 @@
 	\copyrightpage
 	\abstractpage
 	\tableofcontents
+	\authorlist % optional
 	\listoffigures % optional
 	\listofterms % optional
 	\dedicationpage
@@ -102,6 +103,15 @@
 	\chapter*{Listing of abbreviations}
 	\noindent
 	\input{frontmatter/terms}
+	\vspace*{\fill} \newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
+\newcommand{\authorlist}{
+	\chapter*{Author list}
+	\noindent
+	\input{frontmatter/authorlist}
 	\vspace*{\fill} \newpage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
