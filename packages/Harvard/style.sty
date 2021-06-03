@@ -90,22 +90,11 @@
 	\vspace*{\fill} \newpage \rm
 }
 
-\newcommand{\acknowledgments}{
-	\chapter*{Acknowledgments}
-	\noindent
-	\input{frontmatter/thanks}
-	\vspace*{\fill} \newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
-}
-
 \newcommand{\listofterms}{
 	\chapter*{Listing of abbreviations}
 	\noindent
 	\input{frontmatter/terms}
 	\vspace*{\fill} \newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
 }
 
 \newcommand{\authorlist}{
@@ -113,6 +102,14 @@
 	\noindent
 	\input{frontmatter/authorlist}
 	\vspace*{\fill} \newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
 }
+
+\newcommand{\acknowledgments}{
+	\chapter*{Acknowledgments}
+	\noindent
+	\input{frontmatter/thanks}
+	\vspace*{\fill} \newpage
+	%\setcounter{page}{1}
+	%\pagenumbering{roman}
+}
+
